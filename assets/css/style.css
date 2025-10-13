@@ -1,57 +1,694 @@
-.hero {
-  background-color: #6b000d;
-  aspect-ratio: 1.78;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+.website {
+  background-color: #ffffff;
   width: 100%;
-  min-width: 1920px;
-  min-height: 1080px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-.hero .fondo {
+.website .hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #6b000d;
+  aspect-ratio: 1.78;
+}
+
+.website .fondo {
   position: absolute;
   top: 0;
   left: 0;
-  width: 1920px;
-  height: 1080px;
+  width: 100%;
+  height: 100vh;
   object-fit: cover;
 }
 
-.hero .text-wrapper {
-  position: absolute;
+.website .text-wrapper {
   top: 0;
   left: 52px;
-  font-family: "Orliet Pro-Script", Helvetica;
-  font-weight: 400;
   color: #ececde;
   font-size: 520px;
+  position: absolute;
+  font-family: "Orliet Pro-Script", Helvetica;
+  font-style: normal;
+  font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
 }
 
-.hero .quevedo {
+.website .quevedo {
   position: absolute;
   top: 156px;
   left: 0;
-  width: 1920px;
+  width: 100%;
   height: 924px;
   aspect-ratio: 1.78;
   object-fit: cover;
 }
 
-.hero .arrow-forward {
-  position: absolute;
+.website .arrow-forward {
   top: 990px;
   left: 920px;
+  position: absolute;
   width: 80px;
   height: 80px;
   aspect-ratio: 1;
 }
 
-.hero .menu {
+.website .menu {
   position: absolute;
   top: 30px;
   left: 30px;
   width: 100px;
   height: 100px;
   aspect-ratio: 1;
+}
+
+.website .biography {
+  width: 100%;
+  height: 2200px;
+  position: relative;
+  background-color: #ececde;
+}
+
+.website .biography-and-rise {
+  position: absolute;
+  top: 380px;
+  left: 1162px;
+  width: 600px;
+  font-family: "Montserrat", Helvetica;
+  color: #121212;
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+.website .biography-and-rise span {
+  font-weight: 600;
+  font-size: 40px;
+  color:  #6b000d;
+}
+
+.website .div {
+  top: 60px;
+  left: 1091px;
+  color: #6b000d;
+  font-size: 200px;
+  position: absolute;
+font-family: "Orliet Pro-Script", Helvetica;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.website .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1010px;
+  height: 609px;
+}
+
+.website .befunky-collage {
+  position: absolute;
+  top: 609px;
+  left: 0;
+  width: 1010px;
+  height: 554px;
+  object-fit: cover;
+}
+
+.website .img-2 {
+  position: absolute;
+  top: 1163px;
+  left: 0;
+  width: 1010px;
+  height: 428px;
+  object-fit: cover;
+}
+
+.website .setlistcl {
+  position: absolute;
+  top: 1591px;
+  left: 0;
+  width: 1010px;
+  height: 609px;
+  aspect-ratio: 1.66;
+  object-fit: cover;
+}
+
+.website .albums {
+  width: 100%;
+  height: 2160px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ececde;
+  overflow: hidden;
+}
+
+.website .navalbumstirtle {
+  height: 200px;
+  margin-left: -34px;
+  width: 1990px;
+  position: relative;
+}
+
+.website .rectangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1988px;
+  height: 200px;
+  background-color: #6b000d;
+}
+
+.website .text-wrapper-2 {
+  position: absolute;
+  top: 33px;
+  left: 646px;
+font-family: "Orliet Pro-Script", Helvetica;
+  font-style: normal;
+  font-weight: 400;
+  color: #ececde;
+  font-size: 100px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.website .buenasnoches-yee {
+  margin-left: 62px;
+  width: 1798px;
+  height: 800px;
+  position: relative;
+  margin-top: 120px;
+}
+
+.website .rectangle-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1796px;
+  height: 800px;
+  background-color: #6b000d;
+}
+
+.website .https-images-genius {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.website .buenas-noches {
+  position: absolute;
+  top: 100px;
+  left: 896px;
+  width: 800px;
+  font-family: "Montserrat-Bold", Helvetica;
+  color: transparent;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.website .span {
+  font-weight: 700;
+  color: #ececde;
+}
+
+.website .text-wrapper-3 {
+  font-family: "Montserrat-Regular", Helvetica;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.website .arrow-forward-2 {
+  top: 700px;
+  left: 698px;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  aspect-ratio: 1;
+}
+
+.website .dondequiero-estar-yu {
+  margin-left: 62px;
+  width: 1798px;
+  height: 800px;
+  position: relative;
+  margin-top: 60px;
+}
+
+.website .rectangle-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1794px;
+  height: 800px;
+  background-color: #6b000d;
+}
+
+.website .https-images-genius-2 {
+  top: 1px;
+  left: 996px;
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.website .DONDE-QUIERO-ESTAR {
+  position: absolute;
+  top: 129px;
+  left: 98px;
+  width: 799px;
+  font-family: "Montserrat-Bold", Helvetica;
+  font-weight: 400;
+  color: transparent;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.website .arrow-forward-3 {
+  top: 690px;
+  left: 1678px;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  aspect-ratio: 1;
+}
+
+.website .ontour {
+  width: 100%;
+  height: 1200px;
+  display: flex;
+  flex-direction: column;
+  background-color: #6b000d;
+  overflow: hidden;
+}
+
+.website .navalbumstirtle-2 {
+  height: 220px;
+  margin-left: -34px;
+  width: 1990px;
+  position: relative;
+}
+
+.website .rectangle-4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1988px;
+  height: 220px;
+  background-color: #6b000d;
+}
+
+.website .tour {
+  position: absolute;
+  top: 20px;
+  left: 720px;
+  font-family: "Orliet Pro-Regular", Helvetica;
+  font-weight: 400;
+  color: #ececde;
+  font-size: 140px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.website .text-wrapper-4 {
+  font-family: "Orliet Pro-Regular", Helvetica;
+  font-weight: 400;
+  color: #ececde;
+  font-size: 140px;
+  letter-spacing: 0;
+}
+
+.website .text-wrapper-5 {
+  font-family: "Montserrat-SemiBoldItalic", Helvetica;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 100px;
+}
+
+.website .infotor {
+  margin-left: 60px;
+  width: 1806px;
+  margin-top: 10px;
+  display: flex;
+}
+
+.website .buenas-noches-tour {
+  width: 600px;
+  height: 500px;
+  font-family: "Montserrat-Bold", Helvetica;
+  color: transparent;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.website .text-wrapper-6 {
+  font-family: "Montserrat-Regular", Helvetica;
+  color: #ffffff;
+}
+
+.website .navinferior {
+  width: 1924px;
+  height: 200px;
+  position: relative;
+  margin-top: 100px;
+}
+
+.website .rectangle-5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-color: #ececde;
+}
+
+.website .text-wrapper-7 {
+  position: absolute;
+  top: 46px;
+  left: 1098px;
+font-family: "Orliet Pro-Script", Helvetica;
+  font-style: normal;
+  font-weight: 400;
+  color: #6b000d;
+  font-size: 80px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.website .img-3 {
+  left: 860px;
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 200px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.website .img-4 {
+  left: 50px;
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 200px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.website .img-5 {
+  left: 1670px;
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 200px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.website .text-wrapper-8 {
+  position: absolute;
+  top: 46px;
+  left: 288px;
+font-family: "Orliet Pro-Script", Helvetica;
+  font-style: normal;
+  color: #6b000d;
+  font-size: 80px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.website .contact {
+  width: 100%;
+  height: 1150px;
+  position: relative;
+  background-color: #ececde;
+}
+
+.website .rectangle-6 {
+  position: absolute;
+  top: 220px;
+  left: 80px;
+  width: 1760px;
+  height: 890px;
+  background-color: #6b000d;
+}
+
+.website .p {
+  position: absolute;
+  top: 276px;
+  left: 210px;
+  width: 1500px;
+  font-family: "Montserrat-Regular", Helvetica;
+  font-weight: 400;
+  color: #ececde;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.website .rectangle-7 {
+  position: absolute;
+  top: 500px;
+  left: 80px;
+  width: 1760px;
+  height: 610px;
+  background-color: #ececde;
+}
+
+.website .text-wrapper-9 {
+  top: 40px;
+  left: 80px;
+  color: #6b000d;
+  font-size: 120px;
+  position: absolute;
+font-family: "Orliet Pro-Script", Helvetica;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.website .image {
+  position: absolute;
+  top: 551px;
+  left: 80px;
+  width: 1760px;
+  height: 559px;
+  aspect-ratio: 3.15;
+}
+
+.website .footer {
+  width: 100%;
+  height: 550px;
+  position: relative;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.website .img-6 {
+  position: absolute;
+  top: 0;
+  left: 1171px;
+  width: 749px;
+  height: 500px;
+  aspect-ratio: 1.5;
+  object-fit: cover;
+}
+
+.website .text-wrapper-10 {
+  top: 60px;
+  left: 80px;
+  color: #ececde;
+  font-size: 120px;
+  position: absolute;
+font-family: "Orliet Pro-Script", Helvetica;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.website .text-wrapper-11 {
+  position: absolute;
+  top: 75px;
+  left: 651px;
+  font-family: "Montserrat-Bold", Helvetica;
+  font-weight: 700;
+  color: #ececde;
+  font-size: 60px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.website .home-biography {
+  position: absolute;
+  top: 162px;
+  left: 651px;
+  width: 220px;
+  font-family: "Montserrat-Medium", Helvetica;
+  font-weight: 500;
+  color: #ececde;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.website .links-icons-footer {
+  position: absolute;
+  top: 250px;
+  left: 100px;
+  width: 330px;
+  height: 60px;
+}
+
+.website .rectangle-8 {
+  position: absolute;
+  top: 500px;
+  left: 0;
+  width: 1923px;
+  height: 50px;
+  background-color: #6b000d;
+}
+
+.website .text-wrapper-12 {
+  position: absolute;
+  top: 515px;
+  left: 1500px;
+  width: 400px;
+  font-family: "Montserrat-Medium", Helvetica;
+  font-weight: 500;
+  color: #ececde;
+  font-size: 16px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.website .element-QUEVEDO {
+  position: absolute;
+  top: 515px;
+  left: 20px;
+  width: 300px;
+  font-family: "Montserrat-Medium", Helvetica;
+  font-weight: 500;
+  color: #ececde;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.website .text-wrapper-13 {
+  font-family: "Montserrat-Medium", Helvetica;
+  font-weight: 500;
+  color: #ececde;
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+.website .rectangle-9 {
+  position: absolute;
+  top: 358px;
+  left: -46px;
+  width: 532px;
+  height: 20px;
+  background-color: #ececde;
+  border-radius: 80px;
+}
+/* Original CSS code should be injected here */
+
+.website .arrow-forward-link,
+.website .arrow-forward-link-album {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.website .arrow-forward-link {
+  top: 990px;
+  left: 920px;
+  width: 80px;
+  height: 80px;
+}
+
+.website .arrow-forward-link-album {
+  width: 80px;
+  height: 80px;
+}
+
+.website .buenasnoches-yee .arrow-forward-link-album {
+  top: 700px;
+  left: 698px;
+}
+
+.website .dondequiero-estar-yu .arrow-forward-link-album {
+  top: 690px;
+  left: 1678px;
+}
+
+.website .menu {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.website .buenas-noches ol,
+.website .DONDE-QUIERO-ESTAR ol,
+.website .buenas-noches-tour ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.website .buenas-noches ol li,
+.website .DONDE-QUIERO-ESTAR ol li,
+.website .buenas-noches-tour ul li {
+  margin-bottom: 0.5em;
+}
+
+.website .home-biography a {
+  color: #ececde;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.website .home-biography a:hover,
+.website .home-biography a:focus {
+  text-decoration: underline;
+}
+
+.website .arrow-forward-link:hover,
+.website .arrow-forward-link:focus,
+.website .arrow-forward-link-album:hover,
+.website .arrow-forward-link-album:focus {
+  opacity: 0.8;
+}
+
+.website .menu:hover,
+.website .menu:focus {
+  opacity: 0.8;
+}
+
+.website .buenas-noches h3,
+.website .DONDE-QUIERO-ESTAR h3,
+.website .buenas-noches-tour h3 {
+  margin-bottom: 1em;
 }
