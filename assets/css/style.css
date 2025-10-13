@@ -1,0 +1,57 @@
+.hero {
+  background-color: #6b000d;
+  aspect-ratio: 1.78;
+  width: 100%;
+  min-width: 1920px;
+  min-height: 1080px;
+  position: relative;
+}
+
+.hero .fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 1080px;
+  object-fit: cover;
+}
+
+.hero .text-wrapper {
+  position: absolute;
+  top: 0;
+  left: 52px;
+  font-family: "Orliet Pro-Script", Helvetica;
+  font-weight: 400;
+  color: #ececde;
+  font-size: 520px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.hero .quevedo {
+  position: absolute;
+  top: 156px;
+  left: 0;
+  width: 1920px;
+  height: 924px;
+  aspect-ratio: 1.78;
+  object-fit: cover;
+}
+
+.hero .arrow-forward {
+  position: absolute;
+  top: 990px;
+  left: 920px;
+  width: 80px;
+  height: 80px;
+  aspect-ratio: 1;
+}
+
+.hero .menu {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 100px;
+  height: 100px;
+  aspect-ratio: 1;
+}
