@@ -1,9 +1,9 @@
-const menuButton = document.querySelector(".menu"); // botón existente
+const menuButton = document.querySelector(".menu"); 
 const links = [
-  { name: "Biografía", href: "#biography" },
-  { name: "Tours", href: "#tours" },
-  { name: "Discografía", href: "#discography" },
-  { name: "Contacto", href: "#contact" },
+  { name: "Biography", href: "#biography" },
+  { name: "Albums", href: "#albums" },
+  { name: "On Tour", href: "#tours" },
+  { name: "Contact", href: "#contact" },
 ];
 
 const overlay = document.createElement("div");
