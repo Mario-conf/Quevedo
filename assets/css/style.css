@@ -467,9 +467,17 @@
 
 
 .website .moon-footer {
-  background-color:var(--color-primary);
-  height: 100px;
+  display: flex;
+  background-color: var(--color-primary);
+  height: 200px;
   width: 100%;
+}
+
+.website .moon-footer .moon-img {
+  flex: 1;
+  height: 100%;
+  object-fit: 100%; 
+  min-width: 0; 
 }
 
 /* ==================== CONTACT SECTION ==================== */
