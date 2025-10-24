@@ -12,7 +12,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: #6b000d;
+  background-color: var(--color-primary);
   aspect-ratio: 1.78;
 }
 
@@ -117,7 +117,7 @@
   left: 0;
   width: 40%;
   height: 100%;
-  background-color: #6b000d;
+  background-color:  var(--color-primary);
   display: none;
   z-index: 999;
 }
@@ -128,7 +128,7 @@
   left: -40%; 
   width: 40%; 
   height: 100%; 
-  background-color: #6b000d;
+  background-color:  var(--color-primary);
   color: #ececde;
   display: flex;
   flex-direction: column;
@@ -198,7 +198,7 @@
 .website .div {
   grid-column: 2;
   grid-row: 1;
-  color: #6b000d;
+  color:  var(--color-primary);
   font-size: 8rem; 
   font-family: "Orliet Pro-Script", Helvetica;
   font-style: normal;
@@ -223,7 +223,7 @@
 .website .biography-and-rise span {
   font-weight: 600;
   font-size: 1.6rem; 
-  color: #6b000d;
+  color: var(--color-primary);
   display: block;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -234,188 +234,64 @@
 }
 
 /* ==================== ALBUMS SECTION ==================== */
-.website .albums {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+
+.albums{
   background-color: #ececde;
-  padding-bottom: 80px;
 }
-
-.website .navalbumstirtle {
-  height: 200px;
-  width: 100%;
-  position: relative;
+.nav-albums{
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.website .rectangle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #6b000d;
-}
-
-.website .text-wrapper-2 {
-  position: relative;
   font-family: "Orliet Pro-Script", Helvetica;
   font-style: normal;
-  font-weight: 400;
-  color: #ececde;
-  font-size: 6.5rem;
-  letter-spacing: 0;
-  line-height: normal;
-  margin: 0;
-  z-index: 1;
+  font-size: 2.5rem;
+  color:#ececde;
+  background-color:var(--color-primary);
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  
+}
+.rectangle-2,
+.rectangle-3 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center; 
+  gap: clamp(1.25rem, 3vw, 2.5rem); 
+  padding: clamp(1rem, 2vw, 2rem); 
+  background-color: darkred; 
+  border-radius: 12px;
+  margin-bottom: 2rem; 
+  overflow: hidden; 
+}
+.album-buenas-noches , .album-donde-quiero-estar{
+  padding: 1.2rem;
+}
+.buenas-noches,
+.dqe-album {
+  flex: 1; 
+  min-width: 300px;
 }
 
-.website .buenasnoches-yee,
-.website .dondequiero-estar-yu {
-  margin: 0 auto;
-  width: 90%;
-  max-width: 1700px;
-  height: auto;
-  aspect-ratio: 2.25;
-  min-height: 600px;
-  max-height: 800px;
-  position: relative;
+
+.buenas-noches iframe,
+.dqe-album iframe {
+  width: 100%;
 }
 
-.website .buenasnoches-yee {
-  margin-top: 100px;
+.https-images-genius,
+.https-images-genius-2 {
+  width: clamp(350px, 30vw, 500px);
+  aspect-ratio: 1 / 1; 
+  flex-shrink: 0; 
+  border-radius: 12px;
+  overflow: hidden; 
 }
 
-.website .dondequiero-estar-yu {
-  margin-top: 60px;
-}
-
-.website .rectangle-2,
-.website .rectangle-3 {
-  position: absolute;
-  top: 0;
-  left: 0;
+.https-images-genius img,
+.https-images-genius-2 img {
   width: 100%;
   height: 100%;
-  background-color: #6b000d;
-}
-
-
-.website .https-images-genius {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.website .buenas-noches {
-  overflow-y: hidden;
-  position: absolute;
-  top: 8%;
-  left: 52%;
-  right: 3%;
-  bottom: 15%;
-  overflow-y: auto;
-  font-family: "Montserrat", Helvetica;
-  font-size: 0.8rem;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.4;
-  color: #ffffff;
-}
-
-.website .https-images-genius-2 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.website .dqe-album {
-  overflow-y: hidden;
-  position: absolute;
-  top: 8%;
-  left: 3%;
-  right: 52%;
-  bottom: 15%;
-  overflow-y: auto;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 400;
-  font-size: 0.8rem;
-  letter-spacing: 0;
-  line-height: 1.4;
-  color: #ffffff;
-}
-
-.website .span {
-  font-weight: 700;
-  color: #ececde;
-  font-size: 1.2rem;
-  display: block;
-  margin-bottom: 15px;
-}
-
-.website .text-wrapper-3 {
-  font-family: "Montserrat", Helvetica;
-  color: #ffffff;
-  font-size: inherit;
-  font-weight: 400;
-}
-
-.website .buenas-noches ol,
-.website .dqe-album ol {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.website .buenas-noches ol li,
-.website .dqe-album ol li {
-  margin-bottom: 8px;
-  line-height: 1.4;
-}
-
-.website .arrow-forward-link-album {
-  position: absolute;
-  bottom: 3%;
-  left: 33rem;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 60px;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  border: none;
-  background: transparent;
-  padding: 0;
-}
-.website .arrow-forward-link-album2 {
-  position: absolute;
-  bottom: 3%;
-  left: 69rem;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 60px;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  border: none;
-  background: transparent;
-  padding: 0;
-}
-
-.website .arrow-forward-2,
-.website .arrow-forward-3 {
-  width: 100%;
-  height: 100%;
+  object-fit: cover; 
+  display: block; 
 }
 
 /* ==================== TOUR SECTION ==================== */
@@ -424,7 +300,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #6b000d;
+  background-color:var(--color-primary);
   padding-bottom: 0;
 }
 
@@ -443,7 +319,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #6b000d;
+  background-color:var(--color-primary);
 }
 
 .website .tour {
@@ -574,7 +450,7 @@
   font-family: "Orliet Pro-Script", Helvetica;
   font-style: normal;
   font-weight: 400;
-  color: #6b000d;
+  color:var(--color-primary);
   font-size: 3.5rem;
   line-height: 1;
   letter-spacing: 1px;
@@ -591,7 +467,7 @@
 
 
 .website .moon-footer {
-  background-color: #6b000d;
+  background-color:var(--color-primary);
   height: 100px;
   width: 100%;
 }
@@ -606,7 +482,7 @@
 }
 
 .website .text-wrapper-9 {
-  color: #6b000d;
+  color:var(--color-primary);
   font-size: 6rem;
   font-family: "Orliet Pro-Script", Helvetica;
   font-style: normal;
@@ -618,7 +494,7 @@
 
 .website .rectangle-6 {
   width: 100%;
-  background-color: #6b000d;
+  background-color:var(--color-primary);
   padding: 50px 60px;
   margin-bottom: 0;
   height: 200px;
@@ -737,7 +613,7 @@
   left: 0;
   width: 100%;
   height: 30px;
-  background-color: #6b000d;
+  background-color:var(--color-primary);
 }
 
 .website .text-wrapper-12 {
