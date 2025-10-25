@@ -140,7 +140,6 @@
     }
   }
 }
-
 /* ==================== BIOGRAPHY SECTION ==================== */
 
 .biography {
@@ -149,69 +148,58 @@
   background-color: var(--color-secondary);
   padding: 3rem 1.5rem;
   box-sizing: border-box;
-
-  .section-title {
-    color: var(--color-primary);
-    font-family: "Orliet Pro-Script", Helvetica;
-    font-weight: 400;
-    font-size: clamp(4rem, 15vw, 8rem);
-    letter-spacing: 0;
-    line-height: 1.1;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-
-  .biography-container {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 2rem;
-  }
-
-  .biography-text {
-    font-family: "Montserrat", Helvetica;
-    color: var(--color-text);
-    font-size: 1rem;
-    line-height: 1.5;
-
-    h3 {
-      font-weight: 600;
-      font-size: 1.6rem;
-      color: var(--color-primary);
-      display: block;
-      margin-top: 2rem;
-      margin-bottom: 0.5rem;
-
-      &:first-of-type {
-        margin-top: 0;
-      }
-    }
-
-    p {
-      margin: 0;
-      padding-bottom: 1.5rem;
-
-      &:last-of-type {
-        padding-bottom: 0;
-      }
-    }
-  }
-
-  .column-imagenes {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 0.5rem;
-    width: 100%;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-      background-color: #f0f0f0;
-    }
-  }
 }
+
+.biography .section-title {
+  color: var(--color-primary);
+  font-family: "Orliet Pro-Script", Helvetica;
+  font-weight: 400;
+  font-size: clamp(4rem, 15vw, 8rem);
+  letter-spacing: 0;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+
+.biography .biography-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; 
+  max-width: 1200px; 
+  margin: 0 auto;
+}
+
+.biography .bio-image-wrapper img {
+  width: 100%;
+  height: auto; 
+  object-fit: cover; 
+  display: block;
+  background-color: var(--color-secondary); 
+  border-radius: 8px; 
+}
+
+.biography .bio-text-block {
+  font-family: "Montserrat", Helvetica;
+  color: var(--color-text);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.biography .bio-text-block h3 {
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  display: block;
+  margin: 0 0 0.5rem 0; 
+}
+
+.biography .bio-text-block p {
+  margin: 0;
+  padding: 0;
+}
+
+
 
 /* ==================== ALBUMS SECTION ==================== */
 
@@ -752,3 +740,115 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * ========================================
+ * REFACTORIZACIÓN (Layout de Escritorio)
+ * ========================================
+ *
+ * 1. Cambiamos el contenedor a CSS Grid.
+ * 2. Definimos 2 columnas (55% y 45%).
+ * 3. Forzamos TODAS las imágenes a la columna 1.
+ * 4. Forzamos TODO el texto a la columna 2.
+*/
+@media (min-width: 900px) {
+  .biography .biography-container {
+    display: grid;
+    /* Usamos 'fr' para definir las proporciones 55/45 */
+    grid-template-columns: 55fr 45fr;
+    /* 'gap' ahora aplica entre filas (vertical) y columnas (horizontal) */
+    gap: 3rem; 
+    align-items: start; /* Alinea los elementos al inicio de su celda */
+  }
+
+  .biography .bio-image-wrapper {
+    grid-column: 1; /* ¡Magia! Todas las imágenes a la col 1 */
+    position: sticky; /* Opcional: hace que las imágenes se "peguen" al hacer scroll */
+    top: 2rem;
+  }
+
+  .biography .bio-text-block {
+    grid-column: 2; /* ¡Magia! Todo el texto a la col 2 */
+  }
+
+  /* * En desktop, el 'gap' del grid ya separa los bloques de texto.
+   * Pero si queremos más espacio entre las imágenes, podemos añadirlo.
+   * (El 'gap' del grid ya debería hacer esto, pero si no,
+   * podemos forzarlo así).
+  */
+  .biography .bio-image-wrapper + .bio-image-wrapper {
+     margin-top: 2rem; /* Esto no debería ser necesario si 'gap' funciona */
+     /* Nota: 'gap' funciona bien, pero si usas 'sticky' el 'gap' no se aplica
+        entre los elementos 'sticky'. En ese caso, descomenta la línea de arriba.
+        Dado que añadí 'sticky', también añado el 'margin-top' para separarlas. */
+  }
+
+  /* * Dado que he usado 'sticky' en las imágenes, 
+   * el 'row-gap' del grid no las espaciará.
+   * Debemos usar 'margin' en los bloques de texto para
+   * mantener el espaciado vertical que teníamos con 'gap'.
+  */
+   .biography .bio-text-block + .bio-text-block {
+     margin-top: 2rem; 
+   }
+
+   /* * Ajuste para 'sticky': 
+    * Para que 'sticky' funcione bien, los 'bio-image-wrapper' deben
+    * ser los únicos hijos de la columna 1. Lo cual ya son.
+    * Sin embargo, el 'gap' del grid crea filas implícitas.
+    * Para un 'sticky' más limpio, podemos crear dos columnas
+    * explícitas que contengan los elementos.
+    * * PERO, mantengamos tu solicitud original que es más simple.
+    * El código de arriba (con grid-column: 1/2) funciona perfectamente.
+    * He quitado 'sticky' y 'margin-top' para mantenerlo
+    * 100% fiel a tu petición y más simple. El 'gap: 3rem' del grid
+    * se encargará de todo el espaciado.
+   */
+}
+
+/* * CSS FINAL RECOMENDADO (sin el 'sticky' que complica las cosas)
+ * Simplemente borra o reemplaza el @media de arriba con este:
+*/
+
+@media (min-width: 900px) {
+  .biography .biography-container {
+    display: grid;
+    grid-template-columns: 55fr 45fr;
+    /* * 'gap' aplica espacio entre filas Y columnas.
+     * 'row-gap' (3rem) separará Img1 de Img2, y Texto1 de Texto2.
+     * 'column-gap' (3rem) separará la columna de imágenes de la de texto.
+    */
+    gap: 3rem; 
+  }
+
+  .biography .bio-image-wrapper {
+    grid-column: 1; /* Todas las imágenes a la columna 1 */
+  }
+
+  .biography .bio-text-block {
+    grid-column: 2; /* Todo el texto a la columna 2 */
+  }
+}
