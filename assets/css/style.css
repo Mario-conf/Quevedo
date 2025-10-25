@@ -534,209 +534,404 @@
    cursor: pointer;
  }
 
-/* ==================== CONTACT SECTION ==================== */
-.website .contact {
+/* ==============================================
+ * ESTILOS DE ENCABEZADO DE SECCIÓN (COMPARTIDOS)
+ * ============================================== */
+
+ .merchandising .section-header,
+ .contact .section-header {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-bottom: 3rem;
+   text-align: center;
+ }
+ 
+ .merchandising .section-title,
+ .contact .section-title {
+   font-family: var(--font-primary);
+   color: var(--color-primary);
+   font-weight: 400;
+   font-size: clamp(4rem, 15vw, 8rem);
+   line-height: 1.1;
+   margin: 0;
+ }
+ 
+ /* ==============================================
+  * SECCIÓN MERCHANDISING
+  * ============================================== */
+ 
+ .merchandising {
+   width: 100%;
+   background-color: var(--color-secondary);
+   padding: 4rem 1.5rem;
+   box-sizing: border-box;
+ }
+ 
+ .merch-grid {
+   display: grid;
+   /* 1 columna en móvil */
+   grid-template-columns: 1fr;
+   gap: 2.5rem;
+   max-width: 500px; /* Centra las tarjetas en móvil */
+   margin: 0 auto;
+ }
+ 
+ .merch-item {
+   background-color: var(--color-tertiary);
+   border: 1px solid var(--color-border);
+   border-radius: 12px;
+   overflow: hidden;
+   text-align: center;
+   padding-bottom: 1.5rem;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+ 
+ .merch-item:hover {
+   transform: translateY(-10px);
+   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+ }
+ 
+ .merch-item img {
+   width: 100%;
+   height: auto;
+   aspect-ratio: 1 / 1;
+   object-fit: cover;
+   margin-bottom: 1.5rem;
+ }
+ 
+ .merch-item h3 {
+   font-family: var(--font-secondary);
+   font-weight: 600;
+   font-size: 1.25rem;
+   color: var(--color-text);
+   margin: 0 1rem 0.5rem 1rem;
+ }
+ 
+ .merch-price {
+   display: block;
+   font-family: var(--font-secondary);
+   font-size: 1.1rem;
+   color: var(--color-primary);
+   font-weight: 700;
+   margin-bottom: 1.5rem;
+ }
+ 
+ .merch-button {
+   display: inline-block;
+   background-color: var(--color-primary);
+   color: var(--color-secondary);
+   font-family: var(--font-secondary);
+   font-weight: 700;
+   text-decoration: none;
+   text-transform: uppercase;
+   padding: 0.75rem 2.5rem;
+   border-radius: 50px; /* Forma de píldora */
+   transition: all 0.3s ease;
+ }
+ 
+ .merch-button:hover {
+   background-color: #ffffff;
+   transform: scale(1.05);
+   box-shadow: 0 0 15px var(--color-primary);
+ }
+ 
+ /* ==============================================
+  * SECCIÓN CONTACTO
+  * ============================================== */
+ 
+ .contact {
+   width: 100%;
+   background-color: #0c0c0e; /* Fondo ligeramente diferente */
+   padding: 4rem 1.5rem;
+   box-sizing: border-box;
+ }
+ 
+ /* * Adaptando el estilo de .text-wrapper-9 del CSS antiguo 
+  * al .section-title del HTML nuevo
+ */
+ .contact .section-title {
+   font-size: 6rem; /* Tomado de .text-wrapper-9 */
+   letter-spacing: 0;
+   line-height: 1;
+   margin-bottom: 3rem;
+ }
+ 
+ .contact-container {
+   display: flex;
+   flex-direction: column; /* Apilado en móvil */
+   gap: 3rem;
+   max-width: 1200px;
+   margin: 0 auto;
+ }
+ 
+ /* Estilo de las "tarjetas" de formulario e info */
+ .contact-form-wrapper,
+ .contact-info-wrapper {
+   background-color: var(--color-tertiary);
+   border: 1px solid var(--color-border);
+   border-radius: 12px;
+   padding: 2rem;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .contact-form-wrapper h3,
+ .contact-info-wrapper h3 {
+   font-family: var(--font-secondary);
+   font-weight: 700;
+   font-size: 1.75rem;
+   color: var(--color-primary);
+   margin: 0 0 1.5rem 0;
+   border-bottom: 1px solid var(--color-border);
+   padding-bottom: 1rem;
+ }
+ 
+ /* Formulario */
+ .contact-form {
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+ }
+ 
+ .form-group {
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .form-group label {
+   font-family: var(--font-secondary);
+   font-weight: 600;
+   color: var(--color-text-muted);
+   font-size: 0.9rem;
+   margin-bottom: 0.5rem;
+   text-transform: uppercase;
+ }
+ 
+ .form-group input,
+ .form-group textarea {
+   background-color: var(--color-secondary);
+   border: 1px solid var(--color-border);
+   border-radius: 8px;
+   padding: 0.85rem 1rem;
+   font-family: var(--font-secondary);
+   font-size: 1rem;
+   color: var(--color-text);
+   transition: all 0.3s ease;
+ }
+ 
+ .form-group input:focus,
+ .form-group textarea:focus {
+   outline: none;
+   border-color: var(--color-primary);
+   box-shadow: 0 0 10px rgba(255, 211, 58, 0.3);
+ }
+ 
+ .form-group textarea {
+   resize: vertical;
+   min-height: 120px;
+ }
+ 
+ .submit-button {
+   background-color: var(--color-primary);
+   color: var(--color-secondary);
+   font-family: var(--font-secondary);
+   font-weight: 700;
+   text-transform: uppercase;
+   padding: 1rem;
+   border-radius: 8px;
+   border: none;
+   cursor: pointer;
+   font-size: 1rem;
+   transition: all 0.3s ease;
+ }
+ 
+ .submit-button:hover {
+   background-color: #ffffff;
+   transform: translateY(-3px);
+   box-shadow: 0 5px 15px rgba(255, 211, 58, 0.2);
+ }
+ 
+ /* Lado de la información */
+ .contact-info-wrapper p {
+   font-family: var(--font-secondary);
+   color: var(--color-text);
+   line-height: 1.6;
+   margin: 0 0 1.5rem 0;
+ }
+ 
+ .contact-info-wrapper p strong {
+   color: var(--color-text-muted);
+   font-weight: 600;
+   display: block;
+   margin-bottom: 0.25rem;
+ }
+ 
+ .contact-info-wrapper p a {
+   color: var(--color-primary);
+   text-decoration: none;
+   font-weight: 600;
+   word-break: break-all; /* Evita desbordes de email */
+ }
+ 
+ .contact-info-wrapper p a:hover {
+   text-decoration: underline;
+ }
+ 
+ /* Contenedor del mapa */
+ .map-container {
+   margin-top: 2rem;
+   border-radius: 8px;
+   overflow: hidden;
+   border: 1px solid var(--color-border);
+ }
+ 
+ .google-map {
+   display: block;
+   border: 0;
+   /* Efecto de mapa en modo oscuro */
+   filter: invert(90%) grayscale(100%);
+ }
+
+/* ==================== FOOTER ==================== */
+
+/*
+ * ----------------------------------------
+ * Estilo Mobile-First (Default)
+ * ----------------------------------------
+*/
+.footer {
   width: 100%;
-  min-height: 100vh;
-  position: relative;
-  background-color: var(--color-secondary);
-  padding: 60px 5%;
+  position: relative; /* Para los elementos decorativos */
+  background-color: #000000;
+  /* El padding-bottom será 0, la barra legal actúa como tal */
+  padding: 4rem 1.5rem 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrado en móvil */
+  text-align: center;
+  overflow: hidden;
 }
 
-.website .text-wrapper-9 {
-  color:var(--color-primary);
-  font-size: 6rem;
-  font-family: "Orliet Pro-Script", Helvetica;
-  font-style: normal;
+/* 1. Imagen/Logo */
+.footer-logo-img {
+  /* En móvil, ocultamos la imagen grande de la derecha */
+  display: none;
+}
+
+/* 2. Título (Quevedo) */
+.footer-title {
+  /* Adaptado de .text-wrapper-10 */
+  color: var(--color-primary); /* Mejor que secundario sobre negro */
+  font-size: clamp(4rem, 15vw, 6rem); /* Responsive */
+  font-family: var(--font-primary);
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1;
-  margin: 0 0 40px 0;
+  margin: 0 0 3rem 0;
 }
 
-.website .rectangle-6 {
+/* 3. Contenedores de Navegación y Sociales */
+.footer-nav-container,
+.footer-socials-container {
+  margin-bottom: 3rem;
   width: 100%;
-  background-color:var(--color-primary);
-  padding: 50px 60px;
-  margin-bottom: 0;
-  height: 200px;
 }
 
-.website .p {
-  width: 100%;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 400;
-  color:var(--color-secondary);
+/* 4. Encabezados (Quick Links, Follow) */
+.footer-heading {
+  /* Adaptado de .text-wrapper-11 */
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  color: var(--color-primary);
   font-size: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0 0 1.5rem 0;
+}
+
+/* 5. Navegación (Home, Bio, etc.) */
+.footer-nav {
+  /* Adaptado de .home-biography */
+  line-height: 1.8; /* Mucho más legible que 0.8 */
+}
+
+.footer-nav a {
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  color: var(--color-text); /* Texto claro sobre fondo negro */
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.2rem 0;
+  margin: 0 0.5rem; /* Espacio horizontal en móvil */
+  transition: all 0.3s ease;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+  color: var(--color-primary);
+  transform: scale(1.1);
+}
+
+/* 6. Links Sociales (Spotify, etc.) */
+.footer-social-links {
+  /* Adaptado de .links-icons-footer */
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Espacio entre iconos */
+}
+
+.footer-social-links a {
+  display: block;
+}
+
+.footer-social-links img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-social-links a:hover img,
+.footer-social-links a:focus img {
+  transform: scale(1.2);
+  /* Sombra del color primario */
+  filter: drop-shadow(0 0 8px var(--color-primary));
+}
+
+/* 7. Barra Legal (Footer) */
+.footer-legal {
+  /* Adaptado de .rectangle-8 */
+  width: 100vw; /* Ocupa todo el ancho */
+  position: relative;
+  background-color: var(--color-primary);
+  padding: 1.5rem;
+  margin-top: 2rem; /* Espacio sobre la barra */
+  box-sizing: border-box;
+}
+
+.legal-links,
+.copyright {
+  /* Adaptado de .text-wrapper-12 y .element-QUEVEDO */
+  font-family: var(--font-secondary);
+  font-weight: 600; /* Un poco más de peso */
+  color: var(--color-secondary); /* Texto oscuro sobre fondo claro */
+  font-size: 0.8rem;
   letter-spacing: 0;
   line-height: 1.5;
   margin: 0;
 }
-.website .p span a{
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 600;
-}
-.website .rectangle-7 {
-  width: 100%;
-  height: 30px;
-  background-color: var(--color-secondary);
-  padding: 0;
-  margin: 0;
+
+.legal-links {
+  margin-bottom: 0.5rem;
 }
 
-.website .image {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-top: 0;
-}
-
-/* ==================== FOOTER ==================== */
-.website .footer {
-  width: 100%;
-  min-height: 500px;
-  position: relative;
-  background-color: #000000;
-  padding: 60px 5% 0;
-}
-
-.website .img-6 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 40%;
-  max-width: 750px;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.website .text-wrapper-10 {
-  color: var(--color-secondary);
-  font-size: 6rem;
-  font-family: "Orliet Pro-Script", Helvetica;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1;
-  margin: 0 0 40px 0;
-}
-
-.website .text-wrapper-11 {
-  position: absolute;
-  top: 75px;
-  left: 35%;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 700;
-  color: var(--color-secondary);
-  font-size: 2.5rem;
-  letter-spacing: 0;
-  line-height: 1;
-  margin: 0;
-}
-
-.website .home-biography {
-  position: absolute;
-  top: 160px;
-  left: 35%;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 500;
-  color: var(--color-secondary);
-  font-size: 1.2rem;
-  letter-spacing: 0;
-  line-height: 0.8;
-}
-
-.website .home-biography a {
-  color: var(--color-secondary);
-  text-decoration: none;
-  display: block;
-}
-
-.website .home-biography a:hover,
-.website .home-biography a:focus {
-  color:#6b000d;
-  transition: 0.8s;
-  font-size: 1.5rem;
-  font-weight: 300;
-}
-
-.website .links-icons-footer {
-  position: absolute;
-  left: 5%;
-  width: 14rem;
-  height: 60px;
-}
-
-.website .rectangle-8 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 30px;
-  background-color:var(--color-primary);
-}
-
-.website .text-wrapper-12 {
-  position: absolute;
-  bottom: 8.5px;
-  right: 5%;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 500;
-  color: var(--color-secondary);
-  font-size: 0.8rem;
-  text-align: right;
-  letter-spacing: 0;
-  line-height: 1;
-  margin: 0;
-  white-space: nowrap;
-}
-
-.website .element-QUEVEDO {
-  position: absolute;
-  bottom: 8.5px;
-  left: 5%;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 500;
-  color: var(--color-secondary);
-  font-size: 0.8rem;
-  letter-spacing: 0;
-  line-height: 1;
-  margin: 0;
-}
-
-.website .text-wrapper-13 {
-  font-family: "Montserrat", Helvetica;
-  font-weight: 500;
-  color: var(--color-secondary);
-  font-size: 0.8rem;
-  letter-spacing: 0;
-}
-
-.website .rectangle-9 {
-  position: absolute;
-  top: 18rem;
-  left: -10rem;
-  width: 500px;
-  height: 15px;
-  background-color: var(--color-secondary);
-  border-radius: 80px;
-}
-
-/* ==================== HOVER EFFECTS ==================== */
-.website .arrow-forward-link:hover,
-.website .arrow-forward-link:focus,
-.website .arrow-forward-link-album:hover,
-.website .arrow-forward-link-album:focus {
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-.website .menu:hover,
-.website .menu:focus {
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
+/* 8. Rectángulos decorativos (Ocultos en móvil) */
+.rectangle-8,
+.rectangle-9 {
+  display: none;
 }
 
 
@@ -1004,3 +1199,162 @@
   
     /* Si tuvieras más imágenes, puedes seguir el patrón */
   }
+
+
+   
+ /* ==============================================
+  * MEDIA QUERIES (DESKTOP)
+  * ============================================== */
+ 
+ @media (min-width: 768px) {
+  .merch-grid {
+    /* 2 columnas en tablet */
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .merch-grid {
+    /* 3 columnas en desktop */
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+  }
+
+  .contact-container {
+    /* Layout de 2 columnas en desktop */
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; /* Formulario más ancho */
+    gap: 2.5rem;
+    align-items: start; /* Alinea al inicio */
+  }
+}
+
+
+/*
+ * ----------------------------------------
+ * Estilo Desktop (900px y más)
+ * ----------------------------------------
+*/
+@media (min-width: 900px) {
+  .footer {
+    /* Cambiamos a CSS Grid */
+    display: grid;
+    /* Col 1: Contenido | Col 2: Imagen */
+    grid-template-columns: 55% 45%;
+    /* Filas para Título, Nav, Socials, y la barra Legal al fondo */
+    grid-template-rows: auto auto auto 1fr;
+    grid-template-areas:
+      "title   image"
+      "nav     image"
+      "socials image"
+      "legal   legal";
+    min-height: 500px; /* Altura mínima del CSS antiguo */
+    padding: 0; /* El Grid gestiona el padding */
+    align-items: start;
+    text-align: left; /* Alineamos todo a la izquierda */
+  }
+
+  /* 1. Imagen (ahora visible) */
+  .footer-logo-img {
+    /* Adaptado de .img-6 */
+    display: block;
+    grid-area: image; /* Asignamos al área 'image' */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 30%; /* Centra la imagen un poco más arriba */
+    /* Máscara para difuminar con el fondo */
+    mask-image: linear-gradient(to left, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+  }
+
+  /* 2. Título */
+  .footer-title {
+    grid-area: title;
+    margin: 60px 0 30px 10%; /* Padding (top, right, bottom, left) */
+  }
+
+  /* 3. Contenedor Nav */
+  .footer-nav-container {
+    grid-area: nav;
+    margin: 0 0 0 10%;
+    padding-right: 1rem; /* Espacio para que no choque con la imagen */
+    align-self: start;
+    text-align: left;
+  }
+  
+  /* 4. Contenedor Socials */
+  .footer-socials-container {
+    grid-area: socials;
+    margin: 40px 0 0 10%;
+    align-self: start;
+    text-align: left;
+  }
+
+  .footer-heading {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* 5. Navegación (en 2 columnas) */
+  .footer-nav {
+    line-height: 2.2; /* Más espacio vertical */
+    column-count: 2; /* Crea dos columnas de links */
+    column-gap: 2rem;
+  }
+  
+  .footer-nav a {
+    display: block; /* Un link por línea */
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  
+  .footer-nav a:hover,
+  .footer-nav a:focus {
+    transform: translateX(10px); /* Efecto de hover */
+    color: var(--color-primary);
+  }
+
+  /* 6. Links Sociales (alineados a la izq) */
+  .footer-social-links {
+    justify-content: flex-start;
+  }
+
+  /* 7. Barra Legal (al fondo) */
+  .footer-legal {
+    grid-area: legal;
+    margin-top: 0;
+    padding: 0 5%; /* Padding horizontal */
+    width: 100%;
+    height: 30px; /* Altura fija del CSS antiguo */
+    display: flex; /* Para alinear textos */
+    justify-content: space-between; /* Un texto a cada lado */
+    align-items: center;
+  }
+
+  .legal-links,
+  .copyright {
+    /* Adaptamos los textos al layout flex */
+    margin: 0;
+    font-size: 0.8rem;
+  }
+  
+  /* 8. Rectángulos decorativos */
+  .rectangle-8 {
+    /* Oculto, .footer-legal ya hace su trabajo */
+    display: none; 
+  }
+
+  .rectangle-9 {
+    /* Línea decorativa del CSS antiguo */
+    display: block;
+    position: absolute;
+    top: -10px; /* Justo encima de la barra legal */
+    left: 10%;
+    width: 35%;
+    height: 3px;
+    background-color: var(--color-secondary);
+    border-radius: 80px;
+    opacity: 0.2; /* Muy sutil */
+  }
+}
