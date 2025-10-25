@@ -200,66 +200,103 @@
 }
 
 
-
 /* ==================== ALBUMS SECTION ==================== */
 
-.albums{
+.albums {
+  width: 100%;
   background-color: var(--color-secondary);
+  padding: 3rem 1.5rem;
+  box-sizing: border-box;
 }
-.nav-albums{
+
+/* * Estilos del encabezado, adaptados de tu antiguo .nav-albums.
+ * Asumo que el color de fondo de .nav-albums ahora no es necesario,
+ * y solo queremos los estilos de la fuente para el título.
+*/
+.albums .section-header {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.albums .section-header .rectangle {
+  /* Le doy un tamaño por defecto, ya que no estaba en el CSS antiguo */
+  width: 60px;
+  height: 5px;
+  background-color: var(--color-primary);
+}
+
+.albums .section-title {
+  /* Estilos de fuente del antiguo .nav-albums */
   font-family: "Orliet Pro-Script", Helvetica;
   font-style: normal;
   font-size: 2.5rem;
-  color:var(--color-secondary);
-  background-color:var(--color-primary);
-  align-items: center;
-  justify-content: center;
-  height: 150px;
-  
+  /* El color de fondo se ha ido, así que ajusto el color del texto */
+  color: var(--color-primary); 
+  font-weight: 400;
+  margin: 0;
 }
-.rectangle-2,
-.rectangle-3 {
+
+/* * Contenedor para CADA tarjeta de álbum.
+ * Aplica el margen inferior que tenían .rectangle-2 y .rectangle-3.
+*/
+.albums .album-card {
+  margin-bottom: 2rem;
+}
+
+.albums .album-card:last-of-type {
+  margin-bottom: 0;
+}
+
+/* * Contenedor del contenido del álbum (imagen + reproductor).
+ * Hereda los estilos de layout de .rectangle-2 y .rectangle-3.
+ * Mobile-first: apilados verticalmente (flex-direction: column).
+*/
+.albums .album-content {
   display: flex;
-  flex-direction: row-reverse;
-  align-items: center; 
-  gap: clamp(1.25rem, 3vw, 2.5rem); 
-  padding: clamp(1rem, 2vw, 2rem); 
-  background-color: darkred; 
+  flex-direction: column; /* Apilado en móvil */
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  padding: clamp(1rem, 2vw, 2rem);
+  background-color: darkred; /* Mantenido de tu CSS original */
   border-radius: 12px;
-  margin-bottom: 2rem; 
-  overflow: hidden; 
-}
-.album-buenas-noches , .album-donde-quiero-estar{
-  padding: 1.2rem;
-}
-.buenas-noches,
-.dqe-album {
-  flex: 1; 
-  min-width: 300px;
+  overflow: hidden;
 }
 
-
-.buenas-noches iframe,
-.dqe-album iframe {
-  width: 100%;
-}
-
-.https-images-genius,
-.https-images-genius-2 {
-  width: clamp(350px, 30vw, 500px);
-  aspect-ratio: 1 / 1; 
-  flex-shrink: 0; 
+/* * Contenedor de la portada del álbum.
+ * Hereda los estilos de .https-images-genius.
+*/
+.albums .album-cover {
+  width: 100%; /* Ocupa todo el ancho en móvil */
+  max-width: 500px; /* Límite máximo del clamp original */
+  margin: 0 auto; /* Centra la portada en móvil */
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
   border-radius: 12px;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
-.https-images-genius img,
-.https-images-genius-2 img {
+.albums .album-cover img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
-  display: block; 
+  object-fit: cover;
+  display: block;
+}
+
+/* * Contenedor del reproductor de Spotify.
+ * Hereda los estilos de .buenas-noches y .dqe-album.
+*/
+.albums .album-player {
+  flex: 1; /* Permite que ocupe el espacio restante */
+  min-width: 0; /* Soluciona problemas de overflow en flex */
+}
+
+.albums .album-player iframe {
+  width: 100%;
+  height: 500px; /* Altura definida en tu HTML */
+  border: none;
+  border-radius: 8px; /* Un pequeño redondeo para el iframe */
 }
 
 /* ==================== TOUR SECTION ==================== */
@@ -850,5 +887,30 @@
 
   .biography .bio-text-block {
     grid-column: 2; /* Todo el texto a la columna 2 */
+  }
+}
+
+/* * ========================================
+ * Layout de Escritorio (Tablet y más)
+ * ========================================
+*/
+@media (min-width: 768px) {
+  .albums .album-content {
+    /* * Aplicamos el layout en fila del CSS original
+     * (.rectangle-2 y .rectangle-3)
+    */
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .albums .album-cover {
+    /* Restauramos el ancho del clamp del CSS original */
+    width: clamp(350px, 30vw, 500px);
+    margin: 0; /* Quitamos el centrado de móvil */
+  }
+
+  .albums .album-player {
+    /* Restauramos el min-width, útil en layout de fila */
+    min-width: 300px;
   }
 }
