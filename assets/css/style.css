@@ -68,7 +68,7 @@
     }
   }
 
-  #main-nav-list {
+  .main-nav-list {
     display: flex;
     gap: 1.5rem;
     list-style: none;
@@ -671,7 +671,7 @@
   .hero .menu {
     display: block;
 
-  #main-nav-list {
+  .main-nav-list {
     display: none;
   }
 
@@ -734,7 +734,7 @@
   .hero .menu {
     display: block; 
 
-    #main-nav-list {
+    .main-nav-list {
       display: none; 
     }
   }
@@ -744,7 +744,7 @@
   .hero .menu {
     display: block; 
 
-    #main-nav-list {
+    .main-nav-list {
       display: none; 
     }
   }
