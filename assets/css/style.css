@@ -298,191 +298,241 @@
   border: none;
   border-radius: 8px; /* Un pequeño redondeo para el iframe */
 }
+/* ==============================================
+ * ESTILOS GENERALES DE SECCIÓN (COMPARTIDOS)
+ * ============================================== */
 
-/* ==================== TOUR SECTION ==================== */
-.website .ontour {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color:var(--color-primary);
-  padding-bottom: 0;
-}
-
-.website .navalbumstirtle-2 {
-  height: 220px;
-  width: 100%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.website .rectangle-4 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color:var(--color-primary);
-}
-
-.website .tour {
-  position: relative;
-  font-family: "Orliet Pro-Script", Helvetica;
-  font-style: normal;
-  font-weight: 400;
-  color: var(--color-secondary);
-  font-size: 6.5rem;
-  letter-spacing: 0;
-  line-height: 1;
-  margin: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.website .text-wrapper-4 {
-  font-family: "Orliet Pro-Script", Helvetica;
-  font-style: normal;
-  font-size: 8rem;
-  font-weight: 400;
-  color: var(--color-secondary);
-}
-
-.website .text-wrapper-5 {
-  font-family: "Montserrat", Helvetica;
-  font-weight: 600;
-  font-style: italic;
-  font-size: 5rem;
-}
-
-.website .infotor {
-  margin: 40px 5%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-
-
-.website .buenas-noches-tour {
-  font-family: "Montserrat", Helvetica;
-  font-size: 0.8rem;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5;
-  color: #ffffff;
-}
-
-
-.website .buenas-noches-tour h3 {
-  font-weight: 700;
-  font-size: 1.2rem;
-  margin-bottom: 1em;
-  color: var(--color-secondary);
-}
-
-
-.website .buenas-noches-tour ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.website .buenas-noches-tour ul a {
-  font-family: "Montserrat", Helvetica;
-  color: #ffffff;
-  font-weight: 400;
-  text-decoration: none;
-}
-
-.website .buenas-noches-tour ul a:hover {
-  color: var(--color-secondary);
-  transition: 0.8s;
-  font-size: 1.2rem;
-  font-weight: 300;
-}
-
-.website .buenas-noches-tour ul a.past {
-  text-decoration:line-through;
-  opacity: 100%;
-}
-
-/* ==================== moon nav ==================== */
-.website .navinferior {
-  width: 100%;
-  display: flex;
-  flex-direction: column; 
-  margin-top: 3%;
-}
-
-.website .nav-upper {
-  position: relative;
-  width: 100%;
-  height: 200px; 
-  display: flex;
-  align-items: center;
-  justify-content: space-between; 
-  background-color: var(--color-secondary);
-  padding: 0 40px; 
-}
-
-.website .rectangle-5 {
-  position: absolute;
-  inset: 0;
-  background-color: var(--color-secondary);
-  z-index: 0;
-}
-
-
-.website .nav-content {
-  display: flex;
-  align-items: center;
-  z-index: 1;
-}
-
-
-.website .img {
-  width: 120px;
-  height: auto;
-}
-
-
-.website .text {
-  margin-left: 1rem;
-  font-family: "Orliet Pro-Script", Helvetica;
-  font-style: normal;
-  font-weight: 400;
-  color:var(--color-primary);
-  font-size: 3.5rem;
-  line-height: 1;
-  letter-spacing: 1px;
-  white-space: nowrap;
-}
-
-
-.website .nav-content .nav-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  align-items: center;
-}
-
-
-.website .moon-footer {
-  display: flex;
-  background-color: var(--color-primary);
-  width: 100%;
-}
-
-.website .moon-footer .moon-img {
-  flex: 1;
-  min-width: 0;
-  aspect-ratio: 4/3;
-  object-fit: cover;
-}
+ .ontour,
+ .gallery {
+   width: 100%;
+   background-color: var(--color-secondary);
+   padding: 4rem 1.5rem;
+   box-sizing: border-box;
+   position: relative;
+   overflow: hidden; /* Previene desbordes */
+ }
+ 
+ /* Encabezado de sección compartido */
+ .section-header {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-bottom: 3rem;
+   text-align: center;
+ }
+ 
+ /* Título de sección compartido */
+ .section-title {
+   font-family: var(--font-primary);
+   color: var(--color-primary);
+   font-weight: 400;
+   font-size: clamp(4rem, 15vw, 8rem);
+   line-height: 1.1;
+   margin: 0;
+ }
+ 
+ /* ==============================================
+  * SECCIÓN TOUR (.ontour)
+  * ============================================== */
+ 
+ /* Estilo específico para el título del Tour (Tour 2025) */
+ .tour-title {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   line-height: 0.9;
+ }
+ 
+ .tour-title .text-wrapper-4 {
+   /* "Tour" */
+   font-size: 1em; /* Hereda el tamaño de .section-title */
+ }
+ 
+ .tour-title .text-wrapper-5 {
+   /* "2025" */
+   font-family: var(--font-secondary);
+   font-weight: 700;
+   font-size: 0.3em; /* Más pequeño, como subtítulo */
+   color: var(--color-text);
+   letter-spacing: 2px;
+   margin-top: -0.5rem; /* Se solapa un poco con "Tour" */
+ }
+ 
+ /* Rectángulo decorativo */
+ .rectangle-4 {
+   width: 80px;
+   height: 4px;
+   background-color: var(--color-primary);
+   margin-bottom: 1rem;
+ }
+ 
+ /* Contenedor de las listas de fechas */
+ .tour-dates-container {
+   max-width: 1200px;
+   margin: 0 auto;
+   display: grid;
+   /* 1 columna en móvil */
+   grid-template-columns: 1fr;
+   gap: 3rem;
+ }
+ 
+ /* Cada artículo de región (España, Latam, etc.) */
+ .tour-region {
+   background-color: var(--color-tertiary);
+   border: 1px solid var(--color-border);
+   border-radius: 12px;
+   padding: 1.5rem;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .region-title {
+   font-family: var(--font-secondary);
+   font-weight: 700;
+   font-size: 1.75rem;
+   color: var(--color-primary);
+   margin: 0 0 1.5rem 0;
+   border-bottom: 1px solid var(--color-border);
+   padding-bottom: 1rem;
+ }
+ 
+ /* Lista de fechas */
+ .tour-dates-list {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   font-family: var(--font-secondary);
+   font-size: 1rem;
+   line-height: 1.6;
+ }
+ 
+ .tour-dates-list li {
+   padding: 1rem 0;
+   border-bottom: 1px solid var(--color-border);
+   color: var(--color-text); /* Color para "Sold Out" */
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .tour-dates-list li:last-child {
+   border-bottom: none;
+ }
+ 
+ /* Estilo para los enlaces de "Tickets" */
+ .tour-dates-list li a {
+   color: var(--color-primary); /* Color para "Tickets" */
+   text-decoration: none;
+   font-weight: 600;
+   transition: all 0.3s ease;
+ }
+ 
+ .tour-dates-list li a:hover {
+   color: #fff; /* Se ilumina al pasar el ratón */
+   text-decoration: underline;
+   text-shadow: 0 0 8px var(--color-primary);
+ }
+ 
+ /* Galería de imágenes al pie de la sección Tour */
+ .tour-footer-gallery {
+   width: 100vw; /* Ocupa todo el ancho de la ventana */
+   position: relative;
+   left: 50%; /* Truco para centrarlo */
+   transform: translateX(-50%);
+   margin-top: 4rem;
+   padding: 1rem 0;
+   overflow-x: auto; /* Permite scroll horizontal */
+   -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
+   scrollbar-width: none; /* Oculta scrollbar en Firefox */
+ }
+ 
+ .tour-footer-gallery::-webkit-scrollbar {
+   display: none; /* Oculta scrollbar en Chrome/Safari */
+ }
+ 
+ .moon-footer {
+   display: flex;
+   width: max-content; /* El contenedor se estira para alojar las imágenes */
+   gap: 1rem;
+   padding: 0 1.5rem; /* Espaciado en los bordes */
+ }
+ 
+ .moon-img {
+   height: 250px;
+   width: auto;
+   border-radius: 8px;
+   display: block;
+   object-fit: cover;
+   transition: transform 0.3s ease, filter 0.3s ease;
+   filter: grayscale(30%); /* Un toque desaturado */
+ }
+ 
+ .moon-img:hover {
+   transform: scale(1.05);
+   filter: grayscale(0%);
+ }
+ 
+ /* ==============================================
+  * LAYOUT DESKTOP PARA TOUR
+  * ============================================== */
+ 
+ @media (min-width: 900px) {
+   /* El contenedor de fechas pasa a 2 columnas */
+   .tour-dates-container {
+     grid-template-columns: 1fr 1fr;
+     gap: 2rem; /* Reduce el gap en desktop */
+   }
+ 
+   /* El artículo de USA/Europa ocupa las 2 columnas */
+   .tour-region:nth-of-type(3) {
+     grid-column: 1 / -1;
+   }
+ }
+ 
+ /* ==============================================
+  * SECCIÓN GALLERY (.gallery)
+  * ============================================== */
+ 
+ .gallery {
+   /* Fondo ligeramente diferente para distinguirse */
+   background-color: #0c0c0e; 
+ }
+ 
+ .gallery .section-header {
+   margin-bottom: 3rem;
+ }
+ 
+ .gallery .section-title {
+   /* Usamos un estilo de fuente diferente para variar */
+   font-family: var(--font-secondary);
+   font-weight: 800;
+   font-size: clamp(3rem, 10vw, 5rem);
+   letter-spacing: 1px;
+ }
+ 
+ /* El grid de la galería */
+ .gallery-grid {
+   display: grid;
+   max-width: 1400px;
+   margin: 0 auto;
+   gap: 1rem;
+ 
+   /* Mobile: 2 columnas */
+   grid-template-columns: 1fr 1fr;
+   grid-auto-rows: 250px; /* Altura de fila automática */
+ }
+ 
+ .gallery-grid img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 8px;
+   transition: transform 0.3s ease, filter 0.3s ease;
+ }
+ 
+ .gallery-grid img:hover {
+   transform: scale(1.03);
+   filter: brightness(1.2);
+   cursor: pointer;
+ }
 
 /* ==================== CONTACT SECTION ==================== */
 .website .contact {
@@ -914,3 +964,43 @@
     min-width: 300px;
   }
 }
+
+
+
+
+ 
+ /* ==============================================
+  * LAYOUT CREATIVO PARA EL GRID (DESKTOP)
+  * ============================================== */
+ 
+  @media (min-width: 900px) {
+    .gallery-grid {
+      /* Desktop: 4 columnas */
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 300px; /* Filas más altas en desktop */
+    }
+  
+    /* Hacemos que las imágenes ocupen espacios diferentes */
+    .gallery-grid img:nth-child(1) {
+      /* Imagen 1: Grande, 2x2 */
+      grid-column: 1 / 3;
+      grid-row: 1 / 3;
+    }
+    .gallery-grid img:nth-child(2) {
+      /* Imagen 2: Vertical, 1x2 */
+      grid-column: 3 / 4;
+      grid-row: 1 / 3;
+    }
+    .gallery-grid img:nth-child(3) {
+      /* Imagen 3: Horizontal, 2x1 */
+      grid-column: 1 / 3;
+      grid-row: 3 / 4;
+    }
+    .gallery-grid img:nth-child(4) {
+      /* Imagen 4: Cuadrada normal, 1x1 */
+      grid-column: 3 / 4;
+      grid-row: 3 / 4;
+    }
+  
+    /* Si tuvieras más imágenes, puedes seguir el patrón */
+  }
