@@ -670,11 +670,7 @@
   .hero #main-nav-list {
     display: none; 
   }
-  .hero .quevedo {
-    top: 12%; 
-    height: 88%; 
-    object-position: top center; 
-  }
+
 }
 
 @media (max-width: 768px) {
@@ -686,9 +682,7 @@
     display: none; 
   }
 
-  .hero .quevedo {
-    object-position: top center; 
-  }
+
 }
 
 @media (max-width: 480px) {
