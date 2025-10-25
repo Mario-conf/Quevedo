@@ -3,6 +3,7 @@
 :root{
   --color-primary:  #6b000d;
   --color-secondary: #ececde;
+  --color-text: #121212;
 }
 
 * {
