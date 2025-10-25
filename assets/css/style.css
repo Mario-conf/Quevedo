@@ -23,7 +23,7 @@
 .hero .text-wrapper {
   font-family: "Orliet Pro-Script", Helvetica;
   font-weight: 400;
-  color: #ececde;
+  color: var(--color-secondary);
   font-size: 3rem;
   letter-spacing: 0;
   line-height: normal;
@@ -129,7 +129,7 @@
   width: 40%; 
   height: 100%; 
   background-color:  var(--color-primary);
-  color: #ececde;
+  color: var(--color-secondary);
   display: flex;
   flex-direction: column;
   transition: left 0.3s ease;
@@ -146,7 +146,7 @@
   font-size: 8rem;
   font-family: "Orliet Pro-Script", Helvetica;
   font-weight: 400;
-  color: #ececde;
+  color: var(--color-secondary);
 
 }
 
@@ -155,7 +155,7 @@
   margin: 15px 0;
   text-decoration: none;
   font-family: "Montserrat", Helvetica;
-  color: #ececde;
+  color: var(--color-secondary);
   font-size: 1.2rem;
 }
 
@@ -171,7 +171,7 @@
   width: 100%;
   height: 100%;
   position: relative;
-  background-color: #ececde;
+  background-color: var(--color-secondary);
   padding: 0;
   display: grid;
   grid-template-columns: 55% 45%;
@@ -236,14 +236,14 @@
 /* ==================== ALBUMS SECTION ==================== */
 
 .albums{
-  background-color: #ececde;
+  background-color: var(--color-secondary);
 }
 .nav-albums{
   display: flex;
   font-family: "Orliet Pro-Script", Helvetica;
   font-style: normal;
   font-size: 2.5rem;
-  color:#ececde;
+  color:var(--color-secondary);
   background-color:var(--color-primary);
   align-items: center;
   justify-content: center;
@@ -327,7 +327,7 @@
   font-family: "Orliet Pro-Script", Helvetica;
   font-style: normal;
   font-weight: 400;
-  color: #ececde;
+  color: var(--color-secondary);
   font-size: 6.5rem;
   letter-spacing: 0;
   line-height: 1;
@@ -341,7 +341,7 @@
   font-style: normal;
   font-size: 8rem;
   font-weight: 400;
-  color: #ececde;
+  color: var(--color-secondary);
 }
 
 .website .text-wrapper-5 {
@@ -373,7 +373,7 @@
   font-weight: 700;
   font-size: 1.2rem;
   margin-bottom: 1em;
-  color: #ececde;
+  color: var(--color-secondary);
 }
 
 
@@ -394,7 +394,7 @@
 }
 
 .website .buenas-noches-tour ul a:hover {
-  color: #ececde;
+  color: var(--color-secondary);
   transition: 0.8s;
   font-size: 1.2rem;
   font-weight: 300;
@@ -420,14 +420,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between; 
-  background-color: #ececde;
+  background-color: var(--color-secondary);
   padding: 0 40px; 
 }
 
 .website .rectangle-5 {
   position: absolute;
   inset: 0;
-  background-color: #ececde;
+  background-color: var(--color-secondary);
   z-index: 0;
 }
 
@@ -469,15 +469,14 @@
 .website .moon-footer {
   display: flex;
   background-color: var(--color-primary);
-  height: 200px;
   width: 100%;
 }
 
 .website .moon-footer .moon-img {
   flex: 1;
-  height: 100%;
-  object-fit: 100%; 
-  min-width: 0; 
+  min-width: 0;
+  aspect-ratio: 4/3;
+  object-fit: cover;
 }
 
 /* ==================== CONTACT SECTION ==================== */
@@ -485,7 +484,7 @@
   width: 100%;
   min-height: 100vh;
   position: relative;
-  background-color: #ececde;
+  background-color: var(--color-secondary);
   padding: 60px 5%;
 }
 
@@ -512,7 +511,7 @@
   width: 100%;
   font-family: "Montserrat", Helvetica;
   font-weight: 400;
-  color:#ececde;
+  color:var(--color-secondary);
   font-size: 1.5rem;
   letter-spacing: 0;
   line-height: 1.5;
@@ -526,7 +525,7 @@
 .website .rectangle-7 {
   width: 100%;
   height: 30px;
-  background-color: #ececde;
+  background-color: var(--color-secondary);
   padding: 0;
   margin: 0;
 }
@@ -559,7 +558,7 @@
 }
 
 .website .text-wrapper-10 {
-  color: #ececde;
+  color: var(--color-secondary);
   font-size: 6rem;
   font-family: "Orliet Pro-Script", Helvetica;
   font-style: normal;
@@ -575,7 +574,7 @@
   left: 35%;
   font-family: "Montserrat", Helvetica;
   font-weight: 700;
-  color: #ececde;
+  color: var(--color-secondary);
   font-size: 2.5rem;
   letter-spacing: 0;
   line-height: 1;
@@ -588,14 +587,14 @@
   left: 35%;
   font-family: "Montserrat", Helvetica;
   font-weight: 500;
-  color: #ececde;
+  color: var(--color-secondary);
   font-size: 1.2rem;
   letter-spacing: 0;
   line-height: 0.8;
 }
 
 .website .home-biography a {
-  color: #ececde;
+  color: var(--color-secondary);
   text-decoration: none;
   display: block;
 }
@@ -630,7 +629,7 @@
   right: 5%;
   font-family: "Montserrat", Helvetica;
   font-weight: 500;
-  color: #ececde;
+  color: var(--color-secondary);
   font-size: 0.8rem;
   text-align: right;
   letter-spacing: 0;
@@ -645,7 +644,7 @@
   left: 5%;
   font-family: "Montserrat", Helvetica;
   font-weight: 500;
-  color: #ececde;
+  color: var(--color-secondary);
   font-size: 0.8rem;
   letter-spacing: 0;
   line-height: 1;
@@ -655,7 +654,7 @@
 .website .text-wrapper-13 {
   font-family: "Montserrat", Helvetica;
   font-weight: 500;
-  color: #ececde;
+  color: var(--color-secondary);
   font-size: 0.8rem;
   letter-spacing: 0;
 }
@@ -666,7 +665,7 @@
   left: -10rem;
   width: 500px;
   height: 15px;
-  background-color: #ececde;
+  background-color: var(--color-secondary);
   border-radius: 80px;
 }
 
