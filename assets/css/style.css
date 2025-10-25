@@ -11,7 +11,7 @@
   width: 100%;
   min-height: 100vh;
   background-color: var(--color-primary);
-  background-image: url(assets/img/fondo1.png);
+  background-image: url(../img/fondo1.png);
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -661,24 +661,20 @@
 
 /* ==================== MEDIA QUERIES ==================== */
 
-
-@media (max-width: 1200px) { 
-
-  .hero .quevedo {
-    top: auto; 
-    bottom: 0; 
-    height: 90%;
-    object-position: bottom center;
-  }
-
-}
-@media (max-width: 900px){
+@media (max-width: 900px) {
   .hero .menu {
-    display: block; 
+    display: block;
   }
 
   .hero #main-nav-list {
-    display: none; 
+    display: none;
+  }
+
+  .hero .quevedo {
+    top: auto;
+    bottom: 0;
+    height: 90%;
+    object-position: bottom center;
   }
 }
 
