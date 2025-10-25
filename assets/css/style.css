@@ -670,6 +670,12 @@
   .hero #main-nav-list {
     display: none; 
   }
+  .hero .quevedo {
+    top: auto; 
+    bottom: 0; 
+    height: 90%;
+    object-position: bottom center;
+  }
 
 }
 
