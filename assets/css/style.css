@@ -942,7 +942,7 @@
   }
 
   .quevedo {
-  width: 100%;
+  max-width: 320px;
   height: auto;
   object-fit: contain; 
   object-position: bottom center;
