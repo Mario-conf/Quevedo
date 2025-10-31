@@ -142,15 +142,15 @@
 /* ==================== BIOGRAPHY SECTION ==================== */
 
 .biography {
-  background-color: #F5F0E6;
+  background-color: var(--color-secondary); 
   padding: 4rem 2rem;
   width: 100%;
 
   .section-title {
-    font-family: cursive;
+    font-family: "Orliet Pro-Script", Helvetica;
     font-size: 3rem;
     font-weight: normal;
-    color: #590000;
+    color: var(--color-primary); 
     text-align: center;
     margin-bottom: 3rem;
   }
@@ -176,10 +176,10 @@
 
   .bio-text-block {
     h3 {
-      font-family: cursive;
+      font-family: "Orliet Pro-Script", Helvetica;
       font-size: 2.2rem;
       font-weight: normal;
-      color: #590000;
+      color: var(--color-primary); 
       margin-top: 0;
       margin-bottom: 1rem;
     }
@@ -942,11 +942,12 @@
   }
 
   .quevedo {
-    top: auto;
-    bottom: 0;
-    height: 90%;
-    object-fit: contain;
-    object-position: bottom center;
+  width: 100%;
+  height: auto;
+  object-fit: contain; 
+  object-position: bottom center;
+  top: auto;
+  bottom: 0;
   }
 
 
