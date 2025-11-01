@@ -1,11 +1,14 @@
 .website {
   background-color: #ffffff;
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
-/* ==================== HERO SECTION ==================== */
+/*
+  Hero Styles 
+*/
+
 .hero {
   position: relative;
   width: 100%;
@@ -15,196 +18,194 @@
   background-size: cover;
   background-position: center;
   overflow: hidden;
-
-  .quevedo {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 90%;
-    height: 90%;
-    object-fit: cover;
-    z-index: 1;
-  }
-
-  .nav-hero {
-    min-height: 10vh;
-    display: flex;
-    justify-content: space-between;
-
-    padding: 0 5%;
-    position: relative;
-    z-index: 10;
-  }
-
-  .text-wrapper {
-    font-family: "Orliet Pro-Script", Helvetica;
-    font-weight: 400;
-    color: var(--color-secondary);
-    letter-spacing: 0;
-    line-height: 1.1;
-
-    font-size: clamp(2.5rem, 1.5rem + 5vw, 4rem);
-
-    display: flex;
-    align-items: center;
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    nav{
-      display: flex;
-      align-items: center;
-    }
-  }
- 
-
-  .menu {
-    display: none; /* Asegúrate de que esta línea esté presente y sea 'display: none;' */
-    width: 3.125rem;
-    height: 3.125rem;
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    transition: opacity 0.2s ease;
-    z-index: 15;
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-
-  .main-nav-list {
-    display: flex; /* Asegúrate de que esta línea esté presente y sea 'display: flex;' */
-    gap: 1.5rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    a {
-      font-family: Helvetica, Arial, sans-serif;
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--color-secondary);
-      text-decoration: none;
-      transition: opacity 0.3s ease;
-      &:hover {
-        opacity: 0.7;
-      }
-    }
-  }
-
-
-  .hero-socials {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    position: absolute;
-    top: 30%;
-    right: 5%;
-    z-index: 10;
-
-    a {
-      display: block;
-      transition: opacity 0.3s ease;
-      width: clamp(1.875rem, 1rem + 2vw, 2.1875rem);
-      aspect-ratio: 1 / 1;
-      height: auto;
-
-      &:hover {
-        opacity: 0.7;
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-
-  .nav-hero-bottom {
-    position: absolute;
-    bottom: clamp(0.9375rem, 0.8rem + 0.5vw, 1.25rem);
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    z-index: 5;
-  }
-
-  .arrow-forward {
-    width: clamp(3.125rem, 2rem + 3vw, 3.75rem);
-    aspect-ratio: 1 / 1;
-    height: auto;
-    transition: margin-top 0.2s ease;
-    cursor: pointer;
-  }
-
-  .arrow-forward-link:hover {
-    .arrow-forward {
-      margin-top: clamp(0.25rem, 0.2rem + 0.5vw, 0.5rem);
-    }
-  }
 }
-/* ==================== BIOGRAPHY SECTION ==================== */
+
+.hero .quevedo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero .nav-hero {
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+  position: relative;
+  z-index: 10;
+}
+
+.hero .text-wrapper {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  color: var(--color-secondary);
+  letter-spacing: 0;
+  line-height: 1.1;
+  font-size: clamp(2.5rem, 1.5rem + 5vw, 4rem);
+  display: flex;
+  align-items: center;
+}
+
+.hero .text-wrapper a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hero .text-wrapper nav {
+  display: flex;
+  align-items: center;
+}
+
+.hero .menu {
+  display: none;
+  width: 3.125rem;
+  height: 3.125rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  z-index: 15;
+}
+
+.hero .menu img {
+  width: 100%;
+  height: 100%;
+}
+
+.hero .main-nav-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero .main-nav-list a {
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.hero .main-nav-list a:hover {
+  opacity: 0.7;
+}
+
+.hero .hero-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: absolute;
+  top: 30%;
+  right: 5%;
+  z-index: 10;
+}
+
+.hero .hero-socials a {
+  display: block;
+  transition: opacity 0.3s ease;
+  width: clamp(1.875rem, 1rem + 2vw, 2.1875rem);
+  aspect-ratio: 1 / 1;
+  height: auto;
+}
+
+.hero .hero-socials a:hover {
+  opacity: 0.7;
+}
+
+.hero .hero-socials a img {
+  width: 100%;
+  height: 100%;
+}
+
+.hero .nav-hero-bottom {
+  position: absolute;
+  bottom: clamp(0.9375rem, 0.8rem + 0.5vw, 1.25rem);
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+
+.hero .arrow-forward {
+  width: clamp(3.125rem, 2rem + 3vw, 3.75rem);
+  aspect-ratio: 1 / 1;
+  height: auto;
+  transition: margin-top 0.2s ease;
+  cursor: pointer;
+}
+
+.hero .arrow-forward-link:hover .arrow-forward {
+  margin-top: clamp(0.25rem, 0.2rem + 0.5vw, 0.5rem);
+}
+
+/*
+  Biography Styles 
+*/
 
 .biography {
-  background-color: var(--color-secondary); 
+  background-color: var(--color-secondary);
   padding: 4rem 2rem;
   width: 100%;
-
-  .section-title {
-    font-family: "Orliet Pro-Script", Helvetica;
-    font-size: 3rem;
-    font-weight: normal;
-    color: var(--color-primary); 
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-
-  .biography-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: start;
-  }
-
-  .bio-image-wrapper {
-    width: 100%;
-
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-  }
-
-  .bio-text-block {
-    h3 {
-      font-family: "Orliet Pro-Script", Helvetica;
-      font-size: 2.2rem;
-      font-weight: normal;
-      color: var(--color-primary); 
-      margin-top: 0;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-family: serif;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #4a4a4a;
-      text-align: justify;
-      margin: 0;
-    }
-  }
 }
 
-/* ==================== ALBUMS SECTION ==================== */
+.biography .section-title {
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  font-weight: normal;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.biography .biography-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.biography .bio-image-wrapper {
+  width: 100%;
+}
+
+.biography .bio-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.biography .bio-text-block h3 {
+  font-family: var(--font-secondary);
+  font-size: 2.2rem;
+  font-weight: normal;
+  color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.biography .bio-text-block p {
+  font-family: serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+  text-align: justify;
+  margin: 0;
+}
+
+/*
+  Albums Styles 
+*/
 
 .albums {
   width: 100%;
@@ -213,10 +214,6 @@
   box-sizing: border-box;
 }
 
-/* * Estilos del encabezado, adaptados de tu antiguo .nav-albums.
- * Asumo que el color de fondo de .nav-albums ahora no es necesario,
- * y solo queremos los estilos de la fuente para el título.
-*/
 .albums .section-header {
   display: flex;
   align-items: center;
@@ -226,26 +223,20 @@
 }
 
 .albums .section-header .rectangle {
-  /* Le doy un tamaño por defecto, ya que no estaba en el CSS antiguo */
   width: 60px;
   height: 5px;
   background-color: var(--color-primary);
 }
 
 .albums .section-title {
-  /* Estilos de fuente del antiguo .nav-albums */
-  font-family: "Orliet Pro-Script", Helvetica;
+  font-family: var(--font-primary);
   font-style: normal;
   font-size: 2.5rem;
-  /* El color de fondo se ha ido, así que ajusto el color del texto */
-  color: var(--color-primary); 
+  color: var(--color-primary);
   font-weight: 400;
   margin: 0;
 }
 
-/* * Contenedor para CADA tarjeta de álbum.
- * Aplica el margen inferior que tenían .rectangle-2 y .rectangle-3.
-*/
 .albums .album-card {
   margin-bottom: 2rem;
 }
@@ -254,27 +245,20 @@
   margin-bottom: 0;
 }
 
-/* * Contenedor del contenido del álbum (imagen + reproductor).
- * Hereda los estilos de layout de .rectangle-2 y .rectangle-3.
- * Mobile-first: apilados verticalmente (flex-direction: column).
-*/
 .albums .album-content {
   display: flex;
-  flex-direction: column; /* Apilado en móvil */
+  flex-direction: column;
   gap: clamp(1.25rem, 3vw, 2.5rem);
   padding: clamp(1rem, 2vw, 2rem);
-  background-color: darkred; /* Mantenido de tu CSS original */
+  background-color: darkred;
   border-radius: 12px;
   overflow: hidden;
 }
 
-/* * Contenedor de la portada del álbum.
- * Hereda los estilos de .https-images-genius.
-*/
 .albums .album-cover {
-  width: 100%; /* Ocupa todo el ancho en móvil */
-  max-width: 500px; /* Límite máximo del clamp original */
-  margin: 0 auto; /* Centra la portada en móvil */
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
   aspect-ratio: 1 / 1;
   flex-shrink: 0;
   border-radius: 12px;
@@ -288,945 +272,825 @@
   display: block;
 }
 
-/* * Contenedor del reproductor de Spotify.
- * Hereda los estilos de .buenas-noches y .dqe-album.
-*/
 .albums .album-player {
-  flex: 1; /* Permite que ocupe el espacio restante */
-  min-width: 0; /* Soluciona problemas de overflow en flex */
+  flex: 1;
+  min-width: 0;
 }
 
 .albums .album-player iframe {
   width: 100%;
-  height: 500px; /* Altura definida en tu HTML */
+  height: 500px;
   border: none;
-  border-radius: 8px; /* Un pequeño redondeo para el iframe */
+  border-radius: 8px;
 }
-/* ==============================================
- * ESTILOS GENERALES DE SECCIÓN (COMPARTIDOS)
- * ============================================== */
-
- .ontour,
- .gallery {
-   width: 100%;
-   background-color: var(--color-secondary);
-   padding: 4rem 1.5rem;
-   box-sizing: border-box;
-   position: relative;
-   overflow: hidden; /* Previene desbordes */
- }
- 
- /* Encabezado de sección compartido */
- .section-header {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   margin-bottom: 3rem;
-   text-align: center;
- }
- 
- /* Título de sección compartido */
- .section-title {
-   font-family: var(--font-primary);
-   color: var(--color-primary);
-   font-weight: 400;
-   font-size: clamp(4rem, 15vw, 8rem);
-   line-height: 1.1;
-   margin: 0;
- }
- 
- /* ==============================================
-  * SECCIÓN TOUR (.ontour)
-  * ============================================== */
- 
- /* Estilo específico para el título del Tour (Tour 2025) */
- .tour-title {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   line-height: 0.9;
- }
- 
- .tour-title .text-wrapper-4 {
-   /* "Tour" */
-   font-size: 1em; /* Hereda el tamaño de .section-title */
- }
- 
- .tour-title .text-wrapper-5 {
-   /* "2025" */
-   font-family: var(--font-secondary);
-   font-weight: 700;
-   font-size: 0.3em; /* Más pequeño, como subtítulo */
-   color: var(--color-text);
-   letter-spacing: 2px;
-   margin-top: -0.5rem; /* Se solapa un poco con "Tour" */
- }
- 
- /* Rectángulo decorativo */
- .rectangle-4 {
-   width: 80px;
-   height: 4px;
-   background-color: var(--color-primary);
-   margin-bottom: 1rem;
- }
- 
- /* Contenedor de las listas de fechas */
- .tour-dates-container {
-   max-width: 1200px;
-   margin: 0 auto;
-   display: grid;
-   /* 1 columna en móvil */
-   grid-template-columns: 1fr;
-   gap: 3rem;
- }
- 
- /* Cada artículo de región (España, Latam, etc.) */
- .tour-region {
-   background-color: var(--color-tertiary);
-   border: 1px solid var(--color-border);
-   border-radius: 12px;
-   padding: 1.5rem;
-   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
- }
- 
- .region-title {
-   font-family: var(--font-secondary);
-   font-weight: 700;
-   font-size: 1.75rem;
-   color: var(--color-primary);
-   margin: 0 0 1.5rem 0;
-   border-bottom: 1px solid var(--color-border);
-   padding-bottom: 1rem;
- }
- 
- /* Lista de fechas */
- .tour-dates-list {
-   list-style: none;
-   padding: 0;
-   margin: 0;
-   font-family: var(--font-secondary);
-   font-size: 1rem;
-   line-height: 1.6;
- }
- 
- .tour-dates-list li {
-   padding: 1rem 0;
-   border-bottom: 1px solid var(--color-border);
-   color: var(--color-text); /* Color para "Sold Out" */
-   display: flex;
-   flex-direction: column;
- }
- 
- .tour-dates-list li:last-child {
-   border-bottom: none;
- }
- 
- /* Estilo para los enlaces de "Tickets" */
- .tour-dates-list li a {
-   color: var(--color-primary); /* Color para "Tickets" */
-   text-decoration: none;
-   font-weight: 600;
-   transition: all 0.3s ease;
- }
- 
- .tour-dates-list li a:hover {
-   color: #fff; /* Se ilumina al pasar el ratón */
-   text-decoration: underline;
-   text-shadow: 0 0 8px var(--color-primary);
- }
- 
- /* Galería de imágenes al pie de la sección Tour */
- .tour-footer-gallery {
-   width: 100vw; /* Ocupa todo el ancho de la ventana */
-   position: relative;
-   left: 50%; /* Truco para centrarlo */
-   transform: translateX(-50%);
-   margin-top: 4rem;
-   padding: 1rem 0;
-   overflow-x: auto; /* Permite scroll horizontal */
-   -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
-   scrollbar-width: none; /* Oculta scrollbar en Firefox */
- }
- 
- .tour-footer-gallery::-webkit-scrollbar {
-   display: none; /* Oculta scrollbar en Chrome/Safari */
- }
- 
- .moon-footer {
-   display: flex;
-   width: max-content; /* El contenedor se estira para alojar las imágenes */
-   gap: 1rem;
-   padding: 0 1.5rem; /* Espaciado en los bordes */
- }
- 
- .moon-img {
-   height: 250px;
-   width: auto;
-   border-radius: 8px;
-   display: block;
-   object-fit: cover;
-   transition: transform 0.3s ease, filter 0.3s ease;
-   filter: grayscale(30%); /* Un toque desaturado */
- }
- 
- .moon-img:hover {
-   transform: scale(1.05);
-   filter: grayscale(0%);
- }
- 
- /* ==============================================
-  * LAYOUT DESKTOP PARA TOUR
-  * ============================================== */
- 
- @media (min-width: 900px) {
-   /* El contenedor de fechas pasa a 2 columnas */
-   .tour-dates-container {
-     grid-template-columns: 1fr 1fr;
-     gap: 2rem; /* Reduce el gap en desktop */
-   }
- 
-   /* El artículo de USA/Europa ocupa las 2 columnas */
-   .tour-region:nth-of-type(3) {
-     grid-column: 1 / -1;
-   }
- }
- 
- /* ==============================================
-  * SECCIÓN GALLERY (.gallery)
-  * ============================================== */
- 
- .gallery {
-   /* Fondo ligeramente diferente para distinguirse */
-   background-color: #0c0c0e; 
- }
- 
- .gallery .section-header {
-   margin-bottom: 3rem;
- }
- 
- .gallery .section-title {
-   /* Usamos un estilo de fuente diferente para variar */
-   font-family: var(--font-secondary);
-   font-weight: 800;
-   font-size: clamp(3rem, 10vw, 5rem);
-   letter-spacing: 1px;
- }
- 
- /* El grid de la galería */
- .gallery-grid {
-   display: grid;
-   max-width: 1400px;
-   margin: 0 auto;
-   gap: 1rem;
- 
-   /* Mobile: 2 columnas */
-   grid-template-columns: 1fr 1fr;
-   grid-auto-rows: 250px; /* Altura de fila automática */
- }
- 
- .gallery-grid img {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-   border-radius: 8px;
-   transition: transform 0.3s ease, filter 0.3s ease;
- }
- 
- .gallery-grid img:hover {
-   transform: scale(1.03);
-   filter: brightness(1.2);
-   cursor: pointer;
- }
-
-/* ==============================================
- * ESTILOS DE ENCABEZADO DE SECCIÓN (COMPARTIDOS)
- * ============================================== */
-
- .merchandising .section-header,
- .contact .section-header {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   margin-bottom: 3rem;
-   text-align: center;
- }
- 
- .merchandising .section-title,
- .contact .section-title {
-   font-family: var(--font-primary);
-   color: var(--color-primary);
-   font-weight: 400;
-   font-size: clamp(4rem, 15vw, 8rem);
-   line-height: 1.1;
-   margin: 0;
- }
- 
- /* ==============================================
-  * SECCIÓN MERCHANDISING
-  * ============================================== */
- 
- .merchandising {
-   width: 100%;
-   background-color: var(--color-secondary);
-   padding: 4rem 1.5rem;
-   box-sizing: border-box;
- }
- 
- .merch-grid {
-   display: grid;
-   /* 1 columna en móvil */
-   grid-template-columns: 1fr;
-   gap: 2.5rem;
-   max-width: 500px; /* Centra las tarjetas en móvil */
-   margin: 0 auto;
- }
- 
- .merch-item {
-   background-color: var(--color-tertiary);
-   border: 1px solid var(--color-border);
-   border-radius: 12px;
-   overflow: hidden;
-   text-align: center;
-   padding-bottom: 1.5rem;
-   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-   transition: transform 0.3s ease, box-shadow 0.3s ease;
- }
- 
- .merch-item:hover {
-   transform: translateY(-10px);
-   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
- }
- 
- .merch-item img {
-   width: 100%;
-   height: auto;
-   aspect-ratio: 1 / 1;
-   object-fit: cover;
-   margin-bottom: 1.5rem;
- }
- 
- .merch-item h3 {
-   font-family: var(--font-secondary);
-   font-weight: 600;
-   font-size: 1.25rem;
-   color: var(--color-text);
-   margin: 0 1rem 0.5rem 1rem;
- }
- 
- .merch-price {
-   display: block;
-   font-family: var(--font-secondary);
-   font-size: 1.1rem;
-   color: var(--color-primary);
-   font-weight: 700;
-   margin-bottom: 1.5rem;
- }
- 
- .merch-button {
-   display: inline-block;
-   background-color: var(--color-primary);
-   color: var(--color-secondary);
-   font-family: var(--font-secondary);
-   font-weight: 700;
-   text-decoration: none;
-   text-transform: uppercase;
-   padding: 0.75rem 2.5rem;
-   border-radius: 50px; /* Forma de píldora */
-   transition: all 0.3s ease;
- }
- 
- .merch-button:hover {
-   background-color: #ffffff;
-   transform: scale(1.05);
-   box-shadow: 0 0 15px var(--color-primary);
- }
- 
- /* ==============================================
-  * SECCIÓN CONTACTO
-  * ============================================== */
- 
- .contact {
-   width: 100%;
-   background-color: #0c0c0e; /* Fondo ligeramente diferente */
-   padding: 4rem 1.5rem;
-   box-sizing: border-box;
- }
- 
- /* * Adaptando el estilo de .text-wrapper-9 del CSS antiguo 
-  * al .section-title del HTML nuevo
- */
- .contact .section-title {
-   font-size: 6rem; /* Tomado de .text-wrapper-9 */
-   letter-spacing: 0;
-   line-height: 1;
-   margin-bottom: 3rem;
- }
- 
- .contact-container {
-   display: flex;
-   flex-direction: column; /* Apilado en móvil */
-   gap: 3rem;
-   max-width: 1200px;
-   margin: 0 auto;
- }
- 
- /* Estilo de las "tarjetas" de formulario e info */
- .contact-form-wrapper,
- .contact-info-wrapper {
-   background-color: var(--color-tertiary);
-   border: 1px solid var(--color-border);
-   border-radius: 12px;
-   padding: 2rem;
-   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
- }
- 
- .contact-form-wrapper h3,
- .contact-info-wrapper h3 {
-   font-family: var(--font-secondary);
-   font-weight: 700;
-   font-size: 1.75rem;
-   color: var(--color-primary);
-   margin: 0 0 1.5rem 0;
-   border-bottom: 1px solid var(--color-border);
-   padding-bottom: 1rem;
- }
- 
- /* Formulario */
- .contact-form {
-   display: flex;
-   flex-direction: column;
-   gap: 1.5rem;
- }
- 
- .form-group {
-   display: flex;
-   flex-direction: column;
- }
- 
- .form-group label {
-   font-family: var(--font-secondary);
-   font-weight: 600;
-   color: var(--color-text-muted);
-   font-size: 0.9rem;
-   margin-bottom: 0.5rem;
-   text-transform: uppercase;
- }
- 
- .form-group input,
- .form-group textarea {
-   background-color: var(--color-secondary);
-   border: 1px solid var(--color-border);
-   border-radius: 8px;
-   padding: 0.85rem 1rem;
-   font-family: var(--font-secondary);
-   font-size: 1rem;
-   color: var(--color-text);
-   transition: all 0.3s ease;
- }
- 
- .form-group input:focus,
- .form-group textarea:focus {
-   outline: none;
-   border-color: var(--color-primary);
-   box-shadow: 0 0 10px rgba(255, 211, 58, 0.3);
- }
- 
- .form-group textarea {
-   resize: vertical;
-   min-height: 120px;
- }
- 
- .submit-button {
-   background-color: var(--color-primary);
-   color: var(--color-secondary);
-   font-family: var(--font-secondary);
-   font-weight: 700;
-   text-transform: uppercase;
-   padding: 1rem;
-   border-radius: 8px;
-   border: none;
-   cursor: pointer;
-   font-size: 1rem;
-   transition: all 0.3s ease;
- }
- 
- .submit-button:hover {
-   background-color: #ffffff;
-   transform: translateY(-3px);
-   box-shadow: 0 5px 15px rgba(255, 211, 58, 0.2);
- }
- 
- /* Lado de la información */
- .contact-info-wrapper p {
-   font-family: var(--font-secondary);
-   color: var(--color-text);
-   line-height: 1.6;
-   margin: 0 0 1.5rem 0;
- }
- 
- .contact-info-wrapper p strong {
-   color: var(--color-text-muted);
-   font-weight: 600;
-   display: block;
-   margin-bottom: 0.25rem;
- }
- 
- .contact-info-wrapper p a {
-   color: var(--color-primary);
-   text-decoration: none;
-   font-weight: 600;
-   word-break: break-all; /* Evita desbordes de email */
- }
- 
- .contact-info-wrapper p a:hover {
-   text-decoration: underline;
- }
- 
- /* Contenedor del mapa */
- .map-container {
-   margin-top: 2rem;
-   border-radius: 8px;
-   overflow: hidden;
-   border: 1px solid var(--color-border);
- }
- 
- .google-map {
-   display: block;
-   border: 0;
-   /* Efecto de mapa en modo oscuro */
-   filter: invert(90%) grayscale(100%);
- }
-
-/* ==================== FOOTER ==================== */
 
 /*
- * ----------------------------------------
- * Estilo Mobile-First (Default)
- * ----------------------------------------
+  Tour Styles 
 */
-.footer {
+
+.ontour {
   width: 100%;
-  position: relative; /* Para los elementos decorativos */
-  background-color: #000000;
-  /* El padding-bottom será 0, la barra legal actúa como tal */
-  padding: 4rem 1.5rem 0;
-  box-sizing: border-box;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centrado en móvil */
-  text-align: center;
-  overflow: hidden;
+  background-color: #6b000d;
+  padding: 3rem 0;
+  box-sizing: border-box;
 }
 
-/* 1. Imagen/Logo */
-.footer-logo-img {
-  /* En móvil, ocultamos la imagen grande de la derecha */
-  display: none;
+.ontour .section-header .rectangle-4 {
+  width: 80px;
+  height: 4px;
+  background-color: #ececde;
+  margin-bottom: 1rem;
 }
 
-/* 2. Título (Quevedo) */
-.footer-title {
-  /* Adaptado de .text-wrapper-10 */
-  color: var(--color-primary); /* Mejor que secundario sobre negro */
-  font-size: clamp(4rem, 15vw, 6rem); /* Responsive */
+.ontour .section-title .text-wrapper-4 {
   font-family: var(--font-primary);
+  font-style: normal;
   font-weight: 400;
+  color: #ececde;
+  font-size: 6.5rem;
   letter-spacing: 0;
   line-height: 1;
-  margin: 0 0 3rem 0;
 }
 
-/* 3. Contenedores de Navegación y Sociales */
-.footer-nav-container,
-.footer-socials-container {
-  margin-bottom: 3rem;
+.ontour .section-title .text-wrapper-5 {
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 5rem;
+  color: #ececde;
+  margin-top: -0.5rem;
+}
+
+.concert-media-our {
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+.concert-media-our .tour-video {
   width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
 }
 
-/* 4. Encabezados (Quick Links, Follow) */
-.footer-heading {
-  /* Adaptado de .text-wrapper-11 */
+.tour-dates-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.tour-dates-container .tour-region {
+  font-family: var(--font-secondary);
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.tour-dates-container .tour-region .region-title {
   font-family: var(--font-secondary);
   font-weight: 700;
-  color: var(--color-primary);
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  line-height: 1;
-  margin: 0 0 1.5rem 0;
+  font-size: 1.2rem;
+  margin: 0 0 1em 0;
+  color: #ececde;
+  border-bottom: 1px solid #ececde;
+  padding-bottom: 1rem;
 }
 
-/* 5. Navegación (Home, Bio, etc.) */
-.footer-nav {
-  /* Adaptado de .home-biography */
-  line-height: 1.8; /* Mucho más legible que 0.8 */
-}
-
-.footer-nav a {
-  font-family: var(--font-secondary);
-  font-weight: 500;
-  color: var(--color-text); /* Texto claro sobre fondo negro */
-  font-size: 1rem;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.2rem 0;
-  margin: 0 0.5rem; /* Espacio horizontal en móvil */
-  transition: all 0.3s ease;
-}
-
-.footer-nav a:hover,
-.footer-nav a:focus {
-  color: var(--color-primary);
-  transform: scale(1.1);
-}
-
-/* 6. Links Sociales (Spotify, etc.) */
-.footer-social-links {
-  /* Adaptado de .links-icons-footer */
+.tour-dates-container .tour-region .tour-dates-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: center;
-  gap: 2rem; /* Espacio entre iconos */
+  flex-direction: column;
+  gap: 8px;
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-.footer-social-links a {
-  display: block;
+.tour-dates-container .tour-region .tour-dates-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
 }
 
-.footer-social-links img {
-  width: 30px;
-  height: 30px;
+.tour-dates-container .tour-region .tour-dates-list li:last-child {
+  border-bottom: none;
+}
+
+.tour-dates-container .tour-region .tour-dates-list li a {
+  font-family: var(--font-secondary);
+  color: #ffffff;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.tour-dates-container .tour-region .tour-dates-list li a:hover {
+  color: #ececde;
+  transition: 0.8s;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.tour-dates-container .tour-region .tour-dates-list li a.past {
+  text-decoration: line-through;
+  opacity: 100%;
+}
+
+.navinferior {
+  display: flex;
+  flex-direction: column;
+}
+
+.navinferior .nav-upper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ececde;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.navinferior .nav-upper .rectangle-5 {
+  position: absolute;
+  inset: 0;
+  background-color: #ececde;
+  z-index: 0;
+}
+
+.navinferior .nav-upper .nav-content {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.navinferior .nav-upper .nav-content .img {
+  width: 120px;
+  height: auto;
+}
+
+.navinferior .nav-upper .nav-content .text {
+  margin-left: 1rem;
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: 400;
+  color: #6b000d;
+  font-size: 3.5rem;
+  line-height: 1;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.navinferior .nav-upper .nav-content .nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.nav-content .nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+}
+
+/*
+  Gallery Styles 
+*/
+
+.gallery {
+  background-color: #0c0c0e;
+}
+
+.gallery .section-header {
+  margin-bottom: 3rem;
+}
+
+.gallery .section-title {
+  font-family: var(--font-primary);
+  font-weight: 800;
+  font-size: clamp(3rem, 10vw, 5rem);
+  letter-spacing: 1px;
+  color: var(--color-primary);
+}
+
+.gallery .gallery-grid {
+  display: grid;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 250px;
+}
+
+.gallery .gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.footer-social-links a:hover img,
-.footer-social-links a:focus img {
-  transform: scale(1.2);
-  /* Sombra del color primario */
-  filter: drop-shadow(0 0 8px var(--color-primary));
+.gallery .gallery-grid img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.2);
+  cursor: pointer;
 }
 
-/* 7. Barra Legal (Footer) */
-.footer-legal {
-  /* Adaptado de .rectangle-8 */
-  width: 100vw; /* Ocupa todo el ancho */
+/*
+  Merchandising Styles 
+*/
+
+.merchandising {
+  background-color: var(--color-secondary-light-3);
+  padding: 5rem 1rem;
+  color: var(--color-text);
+  text-align: center;
+  width: 100%;
+}
+
+.merchandising .section-header {
+  margin-bottom: 3rem;
+}
+
+.merchandising .section-title {
+  font-size: 2.2rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  font-weight: 700;
   position: relative;
+}
+
+.merchandising .section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
   background-color: var(--color-primary);
-  padding: 1.5rem;
-  margin-top: 2rem; /* Espacio sobre la barra */
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.merch-grid {
+  display: grid;
+  gap: 15px;
+  justify-items: center;
+  align-items: start;
+  width: 100%;
+  grid-template-columns: repeat(3, 330px);
+  margin: 0 auto;
+}
+
+.merch-item {
+  background-color: var(--color-secondary-light-5);
+  border: 1px solid var(--color-secondary-dark-1);
+  border-radius: 12px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 330px;
+  min-height: 550px;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.merch-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  border-color: var(--color-primary-light-3);
+}
+
+.merch-item:hover img {
+  transform: scale(1.03);
+}
+
+.merch-item img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.merch-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-light-1);
+  margin: 0.5rem 0;
+}
+
+.merch-item.sold-out::after {
+  content: "SOLD OUT";
+  position: absolute;
+  top: 12px;
+  right: -30px;
+  background: var(--color-primary-dark-3);
+  color: var(--color-secondary);
+  transform: rotate(45deg);
+  padding: 4px 30px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.merch-price {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary-dark-2);
+  margin-bottom: 0.8rem;
+}
+
+.merch-button {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  background-color: var(--color-primary);
+  color: var(--color-secondary-light-5);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.merch-button:hover {
+  background-color: var(--color-primary-light-2);
+  transform: translateY(-2px);
+}
+
+/*
+  Contact Styles 
+*/
+
+.contact {
+  width: 100%;
+  background-color: var(--color-secondary-light-3);
+  padding: 3rem;
   box-sizing: border-box;
 }
 
-.legal-links,
-.copyright {
-  /* Adaptado de .text-wrapper-12 y .element-QUEVEDO */
-  font-family: var(--font-secondary);
-  font-weight: 600; /* Un poco más de peso */
-  color: var(--color-secondary); /* Texto oscuro sobre fondo claro */
-  font-size: 0.8rem;
+.contact .section-title {
+  font-family: var(--font-primary);
+  font-size: 6rem;
   letter-spacing: 0;
-  line-height: 1.5;
+  line-height: 1;
+  margin-bottom: 3rem;
+  color: var(--color-primary-dark-1);
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-form-wrapper,
+.contact-info-wrapper {
+  background-color: var(--color-secondary-light-5);
+  border: 1px solid var(--color-secondary-dark-2);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px var(--color-secondary-dark-3);
+}
+
+.contact-form-wrapper h3,
+.contact-info-wrapper h3 {
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: var(--color-primary);
+  margin: 0 0 1.5rem 0;
+  border-bottom: 1px solid var(--color-secondary-dark-2);
+  padding-bottom: 1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  color: var(--color-text-light-4);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: var(--color-secondary-light-4);
+  border: 1px solid var(--color-secondary-dark-2);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  color: var(--color-text);
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 10px var(--color-primary-light-4);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-button {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: var(--color-primary-light-3);
+  color: var(--color-secondary-dark-5);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px var(--color-primary-light-5);
+}
+
+.contact-info-wrapper p {
+  font-family: var(--font-secondary);
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+}
+
+.contact-info-wrapper p strong {
+  color: var(--color-text-light-4);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.contact-info-wrapper p a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.contact-info-wrapper p a:hover {
+  text-decoration: underline;
+}
+
+.map-container {
+  margin-top: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--color-secondary-dark-2);
+}
+
+.google-map {
+  display: block;
+  border: 0;
+  filter: invert(90%) grayscale(100%);
+}
+
+/*
+  Footer Styles 
+*/
+
+.footer {
+  background-color: var(--color-text);
+  color: var(--color-secondary-dark-1);
+  padding: 5rem clamp(1.5rem, 8vw, 8rem);
+  font-family: var(--font-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+
+.footer-brand {
+  max-width: 400px;
+}
+
+.footer-logo {
+  width: 100px;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  color: var(--color-primary-light-3);
+  line-height: 1.1;
+}
+
+
+.footer-desc {
+  font-size: 0.9rem;
+  color: var(--color-secondary-dark-3);
+  line-height: 1.6;
+}
+
+.footer-links h3,
+.footer-newsletter h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-newsletter p {
+  color: var(--color-secondary-dark-1);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.footer-links nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-links nav a {
+  color: var(--color-secondary-dark-1);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  opacity: 0.8;
+}
+
+.footer-links nav a:hover {
+  color: var(--color-primary-light-2);
+  opacity: 1;
+}
+
+.footer-divider {
+  margin-top: 3rem;
+  height: 1px;
+  background-color: var(--color-secondary-dark-2);
+  opacity: 0.2;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--color-secondary-dark-1);
+  text-align: center;
+}
+
+.footer-bottom .social-icons img {
+  height: 30px;
+}
+
+.footer-bottom .social-icons img:hover {
+  opacity: 1;
+}
+
+.footer-bottom p {
   margin: 0;
 }
 
-.legal-links {
-  margin-bottom: 0.5rem;
+.footer-bottom a {
+  color: var(--color-secondary-dark-1);
+  text-decoration: none;
+  margin: 0 0.25rem;
 }
 
-/* 8. Rectángulos decorativos (Ocultos en móvil) */
-.rectangle-8,
-.rectangle-9 {
-  display: none;
+.footer-bottom a:hover {
+  color: var(--color-primary-light-3);
+  text-decoration: underline;
 }
 
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
 
-/* ==================== MEDIA QUERIES ==================== */
+.newsletter-form input {
+  flex: 1;
+  padding: 0.9rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--color-secondary-dark-2);
+  background-color: var(--color-text-dark-2);
+  color: var(--color-secondary);
+  font-size: 0.95rem;
+  font-family: var(--font-secondary);
+}
 
+.newsletter-form input::placeholder {
+  color: var(--color-secondary-dark-3);
+}
+
+.newsletter-form input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  background-color: var(--color-text-dark-1);
+}
+
+.newsletter-form button {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 0.9rem 1.2rem;
+  cursor: pointer;
+  font-family: var(--font-secondary);
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: var(--color-primary-light-2);
+  transform: scale(1.02);
+}
+/*
+  Responsive Styles 
+*/
 @media (max-width: 900px) {
   .hero .menu {
     display: block;
   }
-
-  .hero .main-nav-list { /* Esta regla debe estar directamente dentro del media query */
+  .hero .main-nav-list {
     display: none;
   }
-
   .quevedo {
-    /* 1. Forzamos el ancho al 100% de la pantalla */
     width: 100%;
-    
-    /* 2. La altura se ajusta sola. ESTA ES LA CLAVE. */
-    height: auto; 
-    
-    /* 3. Centrado horizontal (para position: absolute) */
+    height: auto;
     left: 50%;
     transform: translateX(-50%);
-    
-    /* 4. Mantenemos tu regla de 'bottom' */
     top: auto;
     bottom: 0;
-
-    /* 5. Anulamos object-fit, ya no es necesario */
     object-fit: unset;
   }
-
-
-
+  .tour-dates-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 300px;
+  }
+  .gallery-grid img:nth-child(1) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+  .gallery-grid img:nth-child(2) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+  }
+  .gallery-grid img:nth-child(3) {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+  }
+  .gallery-grid img:nth-child(4) {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+  }
+  .gallery-grid img:nth-child(5) {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+  }
+  .gallery-grid img:nth-child(6) {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+  }
+  .gallery-grid img:nth-child(7) {
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+  }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 768px) {
-  .biography{
+  .biography {
     padding: 2.5rem 1rem;
-  .section-title {
+  }
+  .biography .section-title {
     font-size: 2.5rem;
     margin-bottom: 2rem;
   }
-
   .biography-container {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-
   .bio-text-block {
     margin-bottom: 1.5rem;
-
-    h3 {
-      font-size: 1.8rem;
-    }
   }
-}
-}
-
-/* * ========================================
- * Layout de Escritorio (Tablet y más)
- * ========================================
-*/
-@media (min-width: 768px) {
-  .albums .album-content {
-    /* * Aplicamos el layout en fila del CSS original
-     * (.rectangle-2 y .rectangle-3)
-    */
-    flex-direction: row-reverse;
+  .bio-text-block h3 {
+    font-size: 1.8rem;
+  }
+  .merch-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+  .merch-item {
+    max-width: 100%;
+  }
+  .merch-button {
+    max-width: 100%;
+    width: 100%;
+  }
+  .album-content {
+    flex-direction: column;
     align-items: center;
   }
-
-  .albums .album-cover {
-    /* Restauramos el ancho del clamp del CSS original */
-    width: clamp(350px, 30vw, 500px);
-    margin: 0; /* Quitamos el centrado de móvil */
+  .album-cover {
+    width: 100%;
+    margin: 0 0 2rem 0;
   }
-
-  .albums .album-player {
-    /* Restauramos el min-width, útil en layout de fila */
-    min-width: 300px;
+  .album-player {
+    min-width: auto;
+    width: 100%;
+  }
+  .newsletter-form {
+    flex-direction: column;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
-
-
-
- 
- /* ==============================================
-  * LAYOUT CREATIVO PARA EL GRID (DESKTOP)
-  * ============================================== */
- 
-  @media (min-width: 900px) {
-    .gallery-grid {
-      /* Desktop: 4 columnas */
-      grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: 300px; /* Filas más altas en desktop */
-    }
-  
-    /* Hacemos que las imágenes ocupen espacios diferentes */
-    .gallery-grid img:nth-child(1) {
-      /* Imagen 1: Grande, 2x2 */
-      grid-column: 1 / 3;
-      grid-row: 1 / 3;
-    }
-    .gallery-grid img:nth-child(2) {
-      /* Imagen 2: Vertical, 1x2 */
-      grid-column: 3 / 4;
-      grid-row: 1 / 3;
-    }
-    .gallery-grid img:nth-child(3) {
-      /* Imagen 3: Horizontal, 2x1 */
-      grid-column: 1 / 3;
-      grid-row: 3 / 4;
-    }
-    .gallery-grid img:nth-child(4) {
-      /* Imagen 4: Cuadrada normal, 1x1 */
-      grid-column: 3 / 4;
-      grid-row: 3 / 4;
-    }
-  
-    /* Si tuvieras más imágenes, puedes seguir el patrón */
-  }
-
-
-   
- /* ==============================================
-  * MEDIA QUERIES (DESKTOP)
-  * ============================================== */
- 
- @media (min-width: 768px) {
-  .merch-grid {
-    /* 2 columnas en tablet */
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 800px;
+@media (max-width: 380px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 280px;
   }
 }
 
 @media (min-width: 1024px) {
-  .merch-grid {
-    /* 3 columnas en desktop */
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 1200px;
-  }
-
   .contact-container {
-    /* Layout de 2 columnas en desktop */
     display: grid;
-    grid-template-columns: 1.5fr 1fr; /* Formulario más ancho */
+    grid-template-columns: 1.5fr 1fr;
     gap: 2.5rem;
-    align-items: start; /* Alinea al inicio */
-  }
-}
-
-
-/*
- * ----------------------------------------
- * Estilo Desktop (900px y más)
- * ----------------------------------------
-*/
-@media (min-width: 900px) {
-  .footer {
-    /* Cambiamos a CSS Grid */
-    display: grid;
-    /* Col 1: Contenido | Col 2: Imagen */
-    grid-template-columns: 55% 45%;
-    /* Filas para Título, Nav, Socials, y la barra Legal al fondo */
-    grid-template-rows: auto auto auto 1fr;
-    grid-template-areas:
-      "title   image"
-      "nav     image"
-      "socials image"
-      "legal   legal";
-    min-height: 500px; /* Altura mínima del CSS antiguo */
-    padding: 0; /* El Grid gestiona el padding */
     align-items: start;
-    text-align: left; /* Alineamos todo a la izquierda */
   }
-
-  /* 1. Imagen (ahora visible) */
-  .footer-logo-img {
-    /* Adaptado de .img-6 */
-    display: block;
-    grid-area: image; /* Asignamos al área 'image' */
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 30%; /* Centra la imagen un poco más arriba */
-    /* Máscara para difuminar con el fondo */
-    mask-image: linear-gradient(to left, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
-  }
-
-  /* 2. Título */
-  .footer-title {
-    grid-area: title;
-    margin: 60px 0 30px 10%; /* Padding (top, right, bottom, left) */
-  }
-
-  /* 3. Contenedor Nav */
-  .footer-nav-container {
-    grid-area: nav;
-    margin: 0 0 0 10%;
-    padding-right: 1rem; /* Espacio para que no choque con la imagen */
-    align-self: start;
-    text-align: left;
-  }
-  
-  /* 4. Contenedor Socials */
-  .footer-socials-container {
-    grid-area: socials;
-    margin: 40px 0 0 10%;
-    align-self: start;
-    text-align: left;
-  }
-
-  .footer-heading {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-
-  /* 5. Navegación (en 2 columnas) */
-  .footer-nav {
-    line-height: 2.2; /* Más espacio vertical */
-    column-count: 2; /* Crea dos columnas de links */
-    column-gap: 2rem;
-  }
-  
-  .footer-nav a {
-    display: block; /* Un link por línea */
-    margin: 0;
-    font-size: 1.1rem;
-  }
-  
-  .footer-nav a:hover,
-  .footer-nav a:focus {
-    transform: translateX(10px); /* Efecto de hover */
-    color: var(--color-primary);
-  }
-
-  /* 6. Links Sociales (alineados a la izq) */
-  .footer-social-links {
-    justify-content: flex-start;
-  }
-
-  /* 7. Barra Legal (al fondo) */
-  .footer-legal {
-    grid-area: legal;
-    margin-top: 0;
-    padding: 0 5%; /* Padding horizontal */
-    width: 100%;
-    height: 30px; /* Altura fija del CSS antiguo */
-    display: flex; /* Para alinear textos */
-    justify-content: space-between; /* Un texto a cada lado */
+  .album-content {
+    flex-direction: row-reverse;
     align-items: center;
   }
-
-  .legal-links,
-  .copyright {
-    /* Adaptamos los textos al layout flex */
+  .album-cover {
+    width: clamp(350px, 30vw, 500px);
     margin: 0;
-    font-size: 0.8rem;
   }
-  
-  /* 8. Rectángulos decorativos */
-  .rectangle-8 {
-    /* Oculto, .footer-legal ya hace su trabajo */
-    display: none; 
+  .album-player {
+    min-width: 300px;
   }
-
-  .rectangle-9 {
-    /* Línea decorativa del CSS antiguo */
-    display: block;
-    position: absolute;
-    top: -10px; /* Justo encima de la barra legal */
-    left: 10%;
-    width: 35%;
-    height: 3px;
-    background-color: var(--color-secondary);
-    border-radius: 80px;
-    opacity: 0.2; /* Muy sutil */
+  .merch-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+  }
+  .newsletter-form {
+    flex-direction: row;
+  }
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
